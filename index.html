@@ -1,415 +1,687 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>SLD AI EDUCATIONS | SLD AI CREATIONS</title>
+  <title>SLD AI EDUCATIONS | Learn AI in Telugu</title>
+  <meta name="description" content="SLD AI CREATIONS వారి SLD AI EDUCATIONS - తెలుగులో ChatGPT, AI Tools, Prompt Engineering, AI Filmmaking, Automation మరియు AI Agents నేర్చుకోండి." />
 
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#071426;
-    color:white;
-    line-height:1.6;
-}
-
-header{
-    background:linear-gradient(135deg,#06152b,#123d78);
-    text-align:center;
-    padding:55px 20px;
-}
-
-.brand{
-    color:#ffcc3d;
-    font-size:18px;
-    font-weight:bold;
-}
-
-h1{
-    font-size:46px;
-    margin:8px 0;
-}
-
-.tagline{
-    font-size:20px;
-    color:#c8ddff;
-}
-
-nav{
-    background:#091d38;
-    text-align:center;
-    padding:15px;
-    position:sticky;
-    top:0;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:10px 15px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ffcc3d;
-}
-
-.hero{
-    text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(180deg,#0a2244,#071426);
-}
-
-.hero h2{
-    font-size:38px;
-    color:#ffcc3d;
-}
-
-.hero p{
-    max-width:800px;
-    margin:15px auto;
-    font-size:19px;
-}
-
-.btn{
-    display:inline-block;
-    margin:12px 6px;
-    padding:13px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    background:#1677ff;
-    color:white;
-    font-weight:bold;
-}
-
-section{
-    max-width:1150px;
-    margin:auto;
-    padding:55px 20px;
-}
-
-.section-title{
-    text-align:center;
-    font-size:32px;
-    margin-bottom:35px;
-    color:#ffcc3d;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#102746;
-    border:1px solid #234a78;
-    border-radius:15px;
-    padding:25px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#ffcc3d;
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#68b4ff;
-}
-
-.course-day{
-    color:#ffcc3d;
-    font-weight:bold;
-}
-
-.about{
-    text-align:center;
-    background:#0d203b;
-    border-radius:18px;
-    padding:35px;
-}
-
-footer{
-    text-align:center;
-    background:#030b16;
-    padding:30px 15px;
-    color:#aebed1;
-}
-
-footer strong{
-    color:#ffcc3d;
-}
-
-@media(max-width:600px){
-    h1{
-        font-size:32px;
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    .hero h2{
-        font-size:28px;
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#06111f;
+      color:#ffffff;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .topbar{
+      background:#020914;
+      color:#bcd3ee;
+      text-align:center;
+      padding:8px 15px;
+      font-size:14px;
+    }
+
+    header{
+      background:linear-gradient(135deg,#07152a,#0d2e57,#123f75);
+      padding:42px 20px 34px;
+      text-align:center;
+      border-bottom:1px solid #20486f;
+    }
+
+    .mini-brand{
+      color:#f5c451;
+      font-weight:700;
+      letter-spacing:1px;
+      font-size:17px;
+      margin-bottom:8px;
+    }
+
+    header h1{
+      font-size:46px;
+      margin-bottom:6px;
+      letter-spacing:1px;
+    }
+
+    header h1 span{
+      color:#f5c451;
+    }
+
+    .tagline{
+      color:#c9ddf5;
+      font-size:19px;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(4,15,29,.96);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid #183d62;
+      text-align:center;
+      padding:14px 10px;
     }
 
     nav a{
-        display:inline-block;
-        margin:6px;
+      color:white;
+      margin:0 11px;
+      font-size:14px;
+      font-weight:700;
     }
-}
-</style>
+
+    nav a:hover{
+      color:#f5c451;
+    }
+
+    .hero{
+      min-height:520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:70px 20px;
+      background:
+        radial-gradient(circle at top right, rgba(28,122,255,.20), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(245,196,81,.10), transparent 30%),
+        linear-gradient(180deg,#081a31,#06111f);
+    }
+
+    .hero-inner{
+      max-width:920px;
+    }
+
+    .hero-badge{
+      display:inline-block;
+      background:#102c4e;
+      border:1px solid #285c8f;
+      color:#83c1ff;
+      padding:7px 14px;
+      border-radius:30px;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .hero h2{
+      font-size:48px;
+      line-height:1.18;
+      margin-bottom:18px;
+    }
+
+    .hero h2 span{
+      color:#f5c451;
+    }
+
+    .hero p{
+      color:#c4d6e8;
+      max-width:780px;
+      margin:0 auto 24px;
+      font-size:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:7px;
+      padding:13px 22px;
+      border-radius:9px;
+      font-weight:700;
+      transition:.25s;
+    }
+
+    .btn-primary{
+      background:#1479ff;
+      color:white;
+    }
+
+    .btn-gold{
+      background:#f5c451;
+      color:#07111d;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      opacity:.94;
+    }
+
+    section{
+      max-width:1180px;
+      margin:auto;
+      padding:65px 20px;
+    }
+
+    .section-head{
+      text-align:center;
+      margin-bottom:36px;
+    }
+
+    .section-head h2{
+      font-size:34px;
+      color:#f5c451;
+      margin-bottom:8px;
+    }
+
+    .section-head p{
+      color:#aebfd1;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,#0d223d,#0a1a2f);
+      border:1px solid #1e446b;
+      border-radius:16px;
+      padding:25px;
+      box-shadow:0 8px 25px rgba(0,0,0,.18);
+      transition:.25s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#f5c451;
+    }
+
+    .card-icon{
+      font-size:32px;
+      margin-bottom:12px;
+    }
+
+    .card h3{
+      color:#7bbcff;
+      margin-bottom:9px;
+      font-size:20px;
+    }
+
+    .card p{
+      color:#c2d0de;
+      font-size:15px;
+    }
+
+    .course-roadmap{
+      background:#091a30;
+      border-top:1px solid #183a5d;
+      border-bottom:1px solid #183a5d;
+    }
+
+    .day{
+      color:#f5c451;
+      font-weight:800;
+      font-size:13px;
+      margin-bottom:6px;
+    }
+
+    .daily-tool{
+      background:linear-gradient(135deg,#0b2341,#102d51);
+      border:1px solid #315b88;
+      border-radius:18px;
+      padding:30px;
+    }
+
+    .daily-tool-top{
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .daily-label{
+      background:#f5c451;
+      color:#06111f;
+      font-weight:800;
+      padding:7px 12px;
+      border-radius:20px;
+      font-size:13px;
+    }
+
+    .tool-status{
+      color:#8fc9ff;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .daily-tool h3{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .daily-tool p{
+      color:#c5d4e3;
+    }
+
+    .category-wrap{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .chip{
+      padding:8px 12px;
+      border-radius:20px;
+      background:#0f2b4c;
+      border:1px solid #2d5b86;
+      color:#bcdcff;
+      font-size:13px;
+    }
+
+    .about-box{
+      background:linear-gradient(135deg,#0a1d35,#0d2a4c);
+      border:1px solid #284f78;
+      border-radius:18px;
+      padding:34px;
+      text-align:center;
+    }
+
+    .about-box h2{
+      color:#f5c451;
+      margin-bottom:12px;
+    }
+
+    .about-box p{
+      color:#c3d2e0;
+      max-width:850px;
+      margin:auto;
+    }
+
+    .contact-box{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+    }
+
+    .contact-item{
+      background:#0b1d33;
+      border:1px solid #1c3f63;
+      padding:22px;
+      border-radius:14px;
+      text-align:center;
+    }
+
+    .contact-item h3{
+      color:#79bcff;
+      margin-bottom:7px;
+    }
+
+    .coming{
+      color:#f5c451;
+      font-weight:700;
+    }
+
+    footer{
+      background:#020914;
+      border-top:1px solid #173653;
+      text-align:center;
+      padding:32px 15px;
+      color:#93a8bd;
+    }
+
+    footer strong{
+      color:#f5c451;
+    }
+
+    .footer-title{
+      font-size:22px;
+      color:white;
+      margin:4px 0;
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size:34px;
+      }
+
+      .hero h2{
+        font-size:34px;
+      }
+
+      .hero{
+        min-height:auto;
+      }
+
+      nav{
+        overflow-x:auto;
+        white-space:nowrap;
+        text-align:left;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:0 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="brand">SLD AI CREATIONS వారి</div>
+  <div class="topbar">
+    SLD AI CREATIONS వారి • Telugu AI Learning Platform
+  </div>
 
-    <h1>SLD AI EDUCATIONS</h1>
+  <header>
+    <div class="mini-brand">SLD AI CREATIONS వారి</div>
+    <h1>SLD <span>AI</span> EDUCATIONS</h1>
+    <div class="tagline">Learn • Create • Grow with AI</div>
+  </header>
 
-    <div class="tagline">
-        Learn • Create • Grow with AI
-    </div>
-</header>
-
-<nav>
+  <nav>
     <a href="#home">HOME</a>
     <a href="#courses">COURSES</a>
-    <a href="#tools">AI TOOLS</a>
-    <a href="#learn">LEARN AI</a>
+    <a href="#dailytool">DAILY AI TOOL</a>
+    <a href="#categories">AI TOOLS</a>
+    <a href="#roadmap">7-DAY COURSE</a>
     <a href="#about">ABOUT</a>
-</nav>
+    <a href="#contact">CONTACT</a>
+  </nav>
 
-<section class="hero" id="home">
+  <div class="hero" id="home">
+    <div class="hero-inner">
 
-    <h2>తెలుగులో AI నేర్చుకోండి 🚀</h2>
+      <div class="hero-badge">
+        తెలుగులో AI నేర్చుకునే Learning Platform
+      </div>
 
-    <p>
-        ChatGPT నుండి AI Filmmaking వరకు,
-        Prompt Engineering నుండి AI Automation వరకు —
-        Beginner నుంచి Step-by-Stepగా తెలుగులో నేర్చుకోండి.
-    </p>
+      <h2>
+        AIని <span>Beginner నుంచి Advanced</span> వరకు
+        Step-by-Stepగా నేర్చుకోండి
+      </h2>
 
-    <a class="btn" href="#courses">
-        START LEARNING
-    </a>
+      <p>
+        ChatGPT • Prompt Engineering • AI Tools • AI Images • AI Videos •
+        AI Filmmaking • Automation • AI Agents — అన్నీ తెలుగులో సులభంగా నేర్చుకోండి.
+      </p>
 
-</section>
+      <a href="#courses" class="btn btn-primary">START LEARNING</a>
+      <a href="#dailytool" class="btn btn-gold">DAILY AI TOOL</a>
 
-<section id="courses">
+    </div>
+  </div>
 
-<h2 class="section-title">
-    🎓 OUR AI COURSES
-</h2>
+  <section id="courses">
+    <div class="section-head">
+      <h2>🎓 AI COURSES</h2>
+      <p>Beginner నుంచి advanced learning వరకు step-by-step courses</p>
+    </div>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="card">
-<h3>🤖 ChatGPT Course</h3>
-<p>
-ChatGPT Basics నుండి Advanced Prompting వరకు
-Step-by-Stepగా నేర్చుకోండి.
-</p>
-</div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>ChatGPT Basics</h3>
+        <p>ChatGPT అంటే ఏమిటి, prompts ఎలా అడగాలి, daily tasksలో ఎలా ఉపయోగించాలి.</p>
+      </div>
 
-<div class="card">
-<h3>✍️ Prompt Engineering</h3>
-<p>
-Perfect Prompts, Role Prompts,
-Image Prompts, Video Prompts మరియు
-Negative Prompts నేర్చుకోండి.
-</p>
-</div>
+      <div class="card">
+        <div class="card-icon">✍️</div>
+        <h3>Prompt Engineering</h3>
+        <p>Perfect Prompt, Role Prompt, Image Prompt, Video Prompt, Negative Prompt నేర్చుకోండి.</p>
+      </div>
 
-<div class="card">
-<h3>🎬 AI Filmmaking</h3>
-<p>
-AIతో Story → Script → Character →
-Image → Video → Voice → Editing వరకు
-పూర్తి Filmmaking Workflow.
-</p>
-</div>
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>AI Image Creation</h3>
+        <p>Professional image prompts, character consistency, poster, thumbnail creation.</p>
+      </div>
 
-<div class="card">
-<h3>⚙️ AI Automation</h3>
-<p>
-రోజువారీ పనులను AI Tools మరియు
-Automationతో వేగంగా చేయడం నేర్చుకోండి.
-</p>
-</div>
+      <div class="card">
+        <div class="card-icon">🎥</div>
+        <h3>AI Video Creation</h3>
+        <p>Image-to-video, text-to-video, cinematic motion, camera movements, lip-sync basics.</p>
+      </div>
 
-<div class="card">
-<h3>🧠 AI Agents</h3>
-<p>
-AI Agents ఎలా పనిచేస్తాయి,
-వాటిని practical పనులకు ఎలా
-ఉపయోగించాలో తెలుసుకోండి.
-</p>
-</div>
+      <div class="card">
+        <div class="card-icon">🎬</div>
+        <h3>AI Filmmaking</h3>
+        <p>Story → Script → Character → Image → Video → Voice → Edit → Final Film workflow.</p>
+      </div>
 
-<div class="card">
-<h3>📱 AI Content Creation</h3>
-<p>
-YouTube, Facebook, Instagram కోసం
-AI Videos, Images మరియు Content
-తయారు చేయడం నేర్చుకోండి.
-</p>
-</div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>AI Automation</h3>
+        <p>Repeated పనులను AI tools మరియు automation workflowsతో వేగంగా చేయడం.</p>
+      </div>
 
-</div>
-</section>
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>AI Agents</h3>
+        <p>AI Agents ఎలా పనిచేస్తాయి, workflowsలో ఎలా ఉపయోగించాలో తెలుసుకోండి.</p>
+      </div>
 
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>AI Content Creation</h3>
+        <p>YouTube, Facebook, Instagram కోసం images, videos, posts మరియు scripts తయారు చేయడం.</p>
+      </div>
 
-<section id="learn">
+    </div>
+  </section>
 
-<h2 class="section-title">
-🚀 7-DAY AI BEGINNER COURSE
-</h2>
+  <section id="dailytool">
+    <div class="section-head">
+      <h2>🤖 DAILY AI TOOL</h2>
+      <p>రోజుకు ఒక్క AI Tool — పూర్తి సమాచారం తెలుగులో</p>
+    </div>
 
-<div class="grid">
+    <div class="daily-tool">
 
-<div class="card">
-<span class="course-day">DAY 1</span>
-<h3>ChatGPT Basics</h3>
-<p>AI, ChatGPT, Prompt అంటే ఏమిటో తెలుసుకోండి.</p>
-</div>
+      <div class="daily-tool-top">
+        <span class="daily-label">COMING SOON</span>
+        <span class="tool-status">100 Days • 100 AI Tools Series</span>
+      </div>
 
-<div class="card">
-<span class="course-day">DAY 2</span>
-<h3>Perfect Prompt</h3>
-<p>సరైన Prompt ఎలా రాయాలో నేర్చుకోండి.</p>
-</div>
+      <h3>రోజుకు ఒక్క AI Tool నేర్చుకుందాం</h3>
 
-<div class="card">
-<span class="course-day">DAY 3</span>
-<h3>AI Daily Tasks</h3>
-<p>రోజువారీ పనుల్లో AI ఉపయోగించడం.</p>
-</div>
+      <p>
+        ప్రతి రోజు ఒక AI Tool గురించి: Tool Name, Company, Free/Paid,
+        Official Link, Use Cases, Features, Step-by-Step Usage, Example Prompt,
+        Advantages, Limitations మరియు Telugu Tutorial Notes ఇక్కడ add చేస్తాం.
+      </p>
 
-<div class="card">
-<span class="course-day">DAY 4</span>
-<h3>Prompt Templates</h3>
-<p>Reusable Prompt Templates తయారు చేయడం.</p>
-</div>
+      <div class="category-wrap">
+        <span class="chip">Chat AI</span>
+        <span class="chip">Image AI</span>
+        <span class="chip">Video AI</span>
+        <span class="chip">Music AI</span>
+        <span class="chip">Voice AI</span>
+        <span class="chip">Automation</span>
+        <span class="chip">Coding AI</span>
+        <span class="chip">Research AI</span>
+      </div>
 
-<div class="card">
-<span class="course-day">DAY 5</span>
-<h3>AI Content Workflow</h3>
-<p>AIతో Content Creation Workflow.</p>
-</div>
+    </div>
+  </section>
 
-<div class="card">
-<span class="course-day">DAY 6</span>
-<h3>Image + Video AI</h3>
-<p>AI Images మరియు AI Videos తయారు చేయడం.</p>
-</div>
+  <section id="categories">
+    <div class="section-head">
+      <h2>🛠️ AI TOOLS CATEGORIES</h2>
+      <p>తర్వాత ఒక్కో categoryలో tools add చేస్తాం</p>
+    </div>
 
-<div class="card">
-<span class="course-day">DAY 7</span>
-<h3>Basic Automation</h3>
-<p>AI Automation Basics నేర్చుకోండి.</p>
-</div>
+    <div class="grid">
 
-</div>
-</section>
+      <div class="card">
+        <h3>💬 Chat AI Tools</h3>
+        <p>ChatGPT, Gemini మరియు conversational AI tools.</p>
+      </div>
 
+      <div class="card">
+        <h3>🖼️ Image AI Tools</h3>
+        <p>AI Image Generation, Editing, Posters, Thumbnails.</p>
+      </div>
 
-<section id="tools">
+      <div class="card">
+        <h3>🎥 Video AI Tools</h3>
+        <p>Text-to-Video, Image-to-Video, AI Filmmaking tools.</p>
+      </div>
 
-<h2 class="section-title">
-🛠️ AI TOOLS
-</h2>
+      <div class="card">
+        <h3>🎙️ Voice AI Tools</h3>
+        <p>Text-to-Speech, Voice Cloning, AI Voiceover tools.</p>
+      </div>
 
-<div class="grid">
+      <div class="card">
+        <h3>🎵 Music AI Tools</h3>
+        <p>AI Songs, Background Music, Sound Generation.</p>
+      </div>
 
-<div class="card">
-<h3>ChatGPT</h3>
-<p>Writing, learning, ideas, prompts మరియు AI assistance.</p>
-</div>
+      <div class="card">
+        <h3>⚙️ Automation Tools</h3>
+        <p>Workflow Automation, AI Agents, Productivity tools.</p>
+      </div>
 
-<div class="card">
-<h3>Google Gemini</h3>
-<p>Google AI assistant మరియు creative AI workflows.</p>
-</div>
+      <div class="card">
+        <h3>💻 Coding AI Tools</h3>
+        <p>Website, App, Code generation మరియు coding assistants.</p>
+      </div>
 
-<div class="card">
-<h3>Google AI Studio</h3>
-<p>Gemini modelsతో AI experiments మరియు development.</p>
-</div>
+      <div class="card">
+        <h3>📚 Research AI Tools</h3>
+        <p>Research, PDF learning, notes, summaries, knowledge tools.</p>
+      </div>
 
-<div class="card">
-<h3>ImageFX</h3>
-<p>AI Image Generation కోసం.</p>
-</div>
+    </div>
+  </section>
 
-<div class="card">
-<h3>Google Flow</h3>
-<p>AI filmmaking మరియు video creation workflows.</p>
-</div>
+  <section class="course-roadmap" id="roadmap">
+    <div class="section-head">
+      <h2>🚀 7-DAY AI BEGINNER COURSE</h2>
+      <p>AIకి కొత్తగా వచ్చిన learners కోసం</p>
+    </div>
 
-<div class="card">
-<h3>NotebookLM</h3>
-<p>Documents మరియు sources ఆధారంగా AI learning.</p>
-</div>
+    <div class="grid">
 
-</div>
+      <div class="card">
+        <div class="day">DAY 1</div>
+        <h3>ChatGPT Basics</h3>
+        <p>AI, ChatGPT, Prompt అంటే ఏమిటి?</p>
+      </div>
 
-</section>
+      <div class="card">
+        <div class="day">DAY 2</div>
+        <h3>Perfect Prompt</h3>
+        <p>సరైన prompt formula నేర్చుకోండి.</p>
+      </div>
 
+      <div class="card">
+        <div class="day">DAY 3</div>
+        <h3>AI Daily Tasks</h3>
+        <p>రోజువారీ పనుల్లో AI ఉపయోగించడం.</p>
+      </div>
 
-<section id="about">
+      <div class="card">
+        <div class="day">DAY 4</div>
+        <h3>Prompt Templates</h3>
+        <p>Reusable prompts తయారు చేయడం.</p>
+      </div>
 
-<div class="about">
+      <div class="card">
+        <div class="day">DAY 5</div>
+        <h3>AI Content Workflow</h3>
+        <p>Content creation workflow నేర్చుకోండి.</p>
+      </div>
 
-<h2>About SLD AI EDUCATIONS</h2>
+      <div class="card">
+        <div class="day">DAY 6</div>
+        <h3>Image + Video AI</h3>
+        <p>Images మరియు videos తయారు చేయడం.</p>
+      </div>
 
-<p>
-<strong>SLD AI CREATIONS</strong> వారి
-<strong>SLD AI EDUCATIONS</strong>
-తెలుగు learners కోసం రూపొందించిన
-AI Learning Platform.
-</p>
+      <div class="card">
+        <div class="day">DAY 7</div>
+        <h3>Basic Automation</h3>
+        <p>Automation basicsతో workflow improve చేయండి.</p>
+      </div>
 
-<br>
+    </div>
+  </section>
 
-<p>
-మా లక్ష్యం — AI గురించి తెలియని Beginner కూడా
-Step-by-Stepగా AI నేర్చుకొని,
-తన Education, Job, Business మరియు
-Content Creationలో ఉపయోగించగలగడం.
-</p>
+  <section id="about">
+    <div class="about-box">
 
-</div>
+      <h2>About SLD AI EDUCATIONS</h2>
 
-</section>
+      <p>
+        <strong>SLD AI CREATIONS</strong> వారి
+        <strong>SLD AI EDUCATIONS</strong> అనేది తెలుగు learners కోసం రూపొందించిన
+        AI Learning Platform. AI గురించి ఏమీ తెలియని beginner కూడా
+        step-by-stepగా నేర్చుకుని Education, Job, Business, Content Creation,
+        Filmmaking మరియు Automationలో AIని ఉపయోగించగలగడం మా లక్ష్యం.
+      </p>
 
+    </div>
+  </section>
 
-<footer>
+  <section id="contact">
+    <div class="section-head">
+      <h2>📞 CONNECT WITH SLD AI EDUCATIONS</h2>
+      <p>Website, YouTube మరియు Social links ఇక్కడ add చేస్తాం</p>
+    </div>
 
-<p>
-<strong>SLD AI CREATIONS వారి</strong>
-</p>
+    <div class="contact-box">
 
-<h2>SLD AI EDUCATIONS</h2>
+      <div class="contact-item">
+        <h3>🌐 Website</h3>
+        <p class="coming">sldaiedu.co.in</p>
+      </div>
 
-<p>
-Learn • Create • Grow with AI
-</p>
+      <div class="contact-item">
+        <h3>▶️ YouTube</h3>
+        <p>SLD AI EDUCATIONS</p>
+      </div>
 
-<br>
+      <div class="contact-item">
+        <h3>📘 Facebook</h3>
+        <p>SLD AI EDUCATIONS</p>
+      </div>
 
-<p>
-© 2026 SLD AI EDUCATIONS.
-All Rights Reserved.
-</p>
+      <div class="contact-item">
+        <h3>📧 Email</h3>
+        <p>Official SLD AI EDU Email</p>
+      </div>
 
-</footer>
+    </div>
+  </section>
+
+  <footer>
+
+    <div>
+      <strong>SLD AI CREATIONS వారి</strong>
+    </div>
+
+    <div class="footer-title">
+      SLD AI EDUCATIONS
+    </div>
+
+    <div>
+      Learn • Create • Grow with AI
+    </div>
+
+    <br>
+
+    <div>
+      © 2026 SLD AI EDUCATIONS. All Rights Reserved.
+    </div>
+
+  </footer>
 
 </body>
 </html>
