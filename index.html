@@ -7,499 +7,506 @@
 <title>SLD AI EDUCATIONS | Learn AI in Telugu</title>
 
 <meta name="description"
-content="SLD AI CREATIONS వారి SLD AI EDUCATIONS - తెలుగులో AI నేర్చుకునే వేదిక.">
+content="SLD AI CREATIONS వారి SLD AI EDUCATIONS - తెలుగులో AI, ChatGPT, AI Tools, Prompt Engineering మరియు AI Filmmaking నేర్చుకోండి.">
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#061426;
-    color:white;
-    line-height:1.6;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#061426;
+  color:#fff;
+  line-height:1.6;
 }
 
 /* HEADER */
-
 header{
-    background:linear-gradient(135deg,#09265a,#0c63d8);
-    text-align:center;
-    padding:40px 20px;
+  background:linear-gradient(135deg,#09265a,#0b62d5);
+  text-align:center;
+  padding:38px 20px;
 }
 
-.small-title{
-    color:#ffd45c;
-    font-weight:bold;
-    margin-bottom:7px;
+.brand-small{
+  color:#ffd45c;
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:6px;
 }
 
 header h1{
-    font-size:45px;
+  font-size:44px;
+  letter-spacing:.5px;
 }
 
 header p{
-    color:#d8e7ff;
-    margin-top:5px;
+  color:#d6e6ff;
+  margin-top:5px;
 }
 
-/* MENU */
-
+/* NAVIGATION */
 nav{
-    background:#061a34;
-    text-align:center;
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:100;
+  background:#061a34;
+  text-align:center;
+  padding:15px 10px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid #183a61;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 18px;
-    font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  margin:0 20px;
+  font-size:14px;
+  font-weight:700;
 }
 
 nav a:hover{
-    color:#ffd45c;
+  color:#ffd45c;
 }
 
 /* HERO */
-
 .hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:60px 20px;
-
-    background:
-    radial-gradient(circle at top left,#0b4077 0%,transparent 35%),
-    linear-gradient(180deg,#081d3a,#061426);
+  min-height:500px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:65px 20px;
+  background:
+    radial-gradient(circle at top left,rgba(0,151,255,.22),transparent 35%),
+    radial-gradient(circle at bottom right,rgba(93,58,255,.18),transparent 35%),
+    linear-gradient(180deg,#082149,#061426);
 }
 
-.hero-content{
-    max-width:900px;
+.hero-inner{
+  max-width:920px;
 }
 
 .badge{
-    display:inline-block;
-    padding:8px 16px;
-    border:1px solid #2c84ca;
-    border-radius:25px;
-    color:#7fd2ff;
-    margin-bottom:20px;
+  display:inline-block;
+  border:1px solid #3489c9;
+  background:rgba(0,151,255,.10);
+  color:#8bd6ff;
+  padding:8px 17px;
+  border-radius:30px;
+  margin-bottom:20px;
 }
 
 .hero h2{
-    font-size:46px;
-    line-height:1.3;
+  font-size:46px;
+  line-height:1.3;
 }
 
 .hero h2 span{
-    color:#ffd45c;
+  color:#ffd45c;
 }
 
 .hero p{
-    max-width:760px;
-    margin:20px auto;
-    color:#c3d3e7;
-    font-size:18px;
+  max-width:780px;
+  margin:20px auto 25px;
+  color:#c5d5e9;
+  font-size:18px;
 }
 
-.button{
-    display:inline-block;
-    background:#1484ff;
-    color:white;
-    text-decoration:none;
-    padding:13px 24px;
-    border-radius:9px;
-    margin-top:10px;
-    font-weight:bold;
+.main-button{
+  display:inline-block;
+  padding:13px 25px;
+  border-radius:9px;
+  background:linear-gradient(90deg,#009dff,#1677ff);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
 }
 
 /* COMMON */
-
 section{
-    padding:65px 20px;
+  padding:65px 20px;
 }
 
 .container{
-    max-width:1050px;
-    margin:auto;
+  max-width:1100px;
+  margin:auto;
 }
 
 .section-title{
-    text-align:center;
-    font-size:34px;
-    color:#ffd45c;
-    margin-bottom:10px;
+  text-align:center;
+  font-size:34px;
+  color:#ffd45c;
+  margin-bottom:7px;
 }
 
-.section-text{
-    text-align:center;
-    color:#aec1d7;
-    margin-bottom:35px;
+.section-subtitle{
+  text-align:center;
+  color:#9fb6d1;
+  margin-bottom:35px;
 }
 
-/* VIDEO */
-
-.video-section{
-    background:#091b32;
+/* VIDEOS */
+.videos{
+  background:#081a30;
 }
 
-.video-box{
-    max-width:900px;
-    margin:auto;
-    background:#0d2748;
-    padding:18px;
-    border-radius:18px;
-    border:1px solid #1f4d78;
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.video-card{
+  background:linear-gradient(180deg,#0d2849,#091c34);
+  border:1px solid #214b74;
+  border-radius:17px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
 }
 
 .video-wrapper{
-    position:relative;
-    padding-bottom:56.25%;
-    height:0;
-    overflow:hidden;
-    border-radius:12px;
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+  background:#000;
 }
 
 .video-wrapper iframe{
-    position:absolute;
-    width:100%;
-    height:100%;
-    left:0;
-    top:0;
-    border:0;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
 }
 
-.video-info{
-    padding:20px 5px 5px;
+.video-content{
+  padding:20px;
 }
 
-.video-info h3{
-    color:#75caff;
-    font-size:23px;
+.video-number{
+  color:#ffd45c;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:5px;
 }
 
-.video-info p{
-    color:#bdcde0;
-    margin-top:8px;
+.video-content h3{
+  color:#75caff;
+  font-size:21px;
+  margin-bottom:8px;
+}
+
+.video-content p{
+  color:#b9cbe0;
+  font-size:15px;
 }
 
 /* ABOUT */
-
 .about-box{
-    max-width:900px;
-    margin:auto;
-    background:#0b203b;
-    padding:35px;
-    border-radius:18px;
-    border:1px solid #204b73;
-    text-align:center;
+  max-width:900px;
+  margin:auto;
+  padding:35px;
+  background:linear-gradient(135deg,#0c2341,#0b1c34);
+  border:1px solid #234e77;
+  border-radius:18px;
+  text-align:center;
 }
 
 .about-box p{
-    color:#c0d0e1;
-    font-size:17px;
+  color:#c2d2e3;
+  font-size:17px;
 }
 
 /* CONTACT */
-
 .contact{
-    background:#081a30;
+  background:#081a30;
 }
 
 .contact-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
 }
 
 .contact-buttons a{
-    text-decoration:none;
-    color:white;
-    background:#0e2c50;
-    border:1px solid #285a88;
-    padding:13px 20px;
-    border-radius:10px;
-    font-weight:bold;
+  display:inline-block;
+  min-width:140px;
+  text-align:center;
+  padding:13px 18px;
+  border-radius:9px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:700;
+  background:#0e2c50;
+  border:1px solid #285b88;
 }
 
 .contact-buttons a:hover{
-    background:#146cca;
+  background:#1267bc;
 }
 
 /* FOOTER */
-
 footer{
-    text-align:center;
-    background:#020b16;
-    padding:30px 15px;
-    color:#91a7be;
+  background:#020b16;
+  color:#8fa6bd;
+  text-align:center;
+  padding:30px 15px;
 }
 
 footer strong{
-    color:#ffd45c;
+  color:#ffd45c;
 }
 
 /* MOBILE */
+@media(max-width:800px){
+  header h1{
+    font-size:31px;
+  }
 
-@media(max-width:700px){
+  .hero h2{
+    font-size:33px;
+  }
 
-    header h1{
-        font-size:31px;
-    }
+  .video-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero h2{
-        font-size:33px;
-    }
-
-    nav a{
-        display:inline-block;
-        margin:5px 8px;
-        font-size:13px;
-    }
-
+  nav a{
+    display:inline-block;
+    margin:5px 9px;
+  }
 }
-
 </style>
 </head>
 
-
 <body>
 
-
 <header>
-
-<div class="small-title">
-SLD AI CREATIONS వారి
-</div>
-
-<h1>SLD AI EDUCATIONS</h1>
-
-<p>Learn • Create • Grow with AI</p>
-
+  <div class="brand-small">SLD AI CREATIONS వారి</div>
+  <h1>SLD AI EDUCATIONS</h1>
+  <p>Learn • Create • Grow with AI</p>
 </header>
 
-
 <nav>
-
-<a href="#home">HOME</a>
-
-<a href="#video">FIRST VIDEO</a>
-
-<a href="#about">ABOUT</a>
-
-<a href="#contact">CONTACT</a>
-
+  <a href="#home">HOME</a>
+  <a href="#videos">VIDEOS</a>
+  <a href="#about">ABOUT</a>
+  <a href="#contact">CONTACT</a>
 </nav>
 
-
 <!-- HOME -->
-
 <section class="hero" id="home">
+  <div class="hero-inner">
 
-<div class="hero-content">
+    <div class="badge">
+      తెలుగులో AI నేర్చుకునే Learning Platform
+    </div>
 
-<div class="badge">
-తెలుగులో AI నేర్చుకునే Learning Platform
-</div>
+    <h2>
+      AIని <span>Beginner నుంచి Advanced</span> వరకు
+      <br>
+      Step-by-Stepగా నేర్చుకోండి
+    </h2>
 
-<h2>
+    <p>
+      ChatGPT • AI Tools • Prompt Engineering • AI Image Creation •
+      AI Video Creation • AI Filmmaking • Automation వంటి విషయాలను
+      తెలుగులో సులభంగా నేర్చుకోండి.
+    </p>
 
-AIని <span>Beginner నుంచి Advanced</span> వరకు
+    <a href="#videos" class="main-button">
+      ▶ START LEARNING
+    </a>
 
-<br>
-
-Step-by-Stepగా నేర్చుకోండి
-
-</h2>
-
-<p>
-
-ChatGPT • AI Tools • Prompt Engineering •
-AI Image Creation • AI Video Creation •
-AI Filmmaking • Automation వంటి విషయాలను
-తెలుగులో సులభంగా నేర్చుకోండి.
-
-</p>
-
-<a class="button" href="#video">
-START LEARNING
-</a>
-
-</div>
-
+  </div>
 </section>
 
+<!-- VIDEOS -->
+<section class="videos" id="videos">
 
-<!-- FIRST VIDEO -->
+  <div class="container">
 
-<section class="video-section" id="video">
+    <h2 class="section-title">
+      🎬 AI LEARNING VIDEOS
+    </h2>
 
-<div class="container">
+    <p class="section-subtitle">
+      SLD AI EDUCATIONS వారి తెలుగు AI Lessons
+    </p>
 
-<h2 class="section-title">
-🎬 SLD AI EDUCATIONS – FIRST VIDEO
-</h2>
+    <div class="video-grid">
 
-<p class="section-text">
-మా మొదటి AI Learning Video చూడండి
-</p>
+      <!-- VIDEO 1 -->
+      <div class="video-card">
 
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/LtDLZK05H68?start=12"
+            title="SLD AI EDUCATIONS Video 1"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
 
-<div class="video-box">
+        <div class="video-content">
 
-<div class="video-wrapper">
+          <div class="video-number">
+            LESSON 01
+          </div>
 
-<iframe
-src="https://www.youtube.com/embed/LtDLZK05H68?start=12"
-title="SLD AI EDUCATIONS First Video"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
+          <h3>
+            AI Learning in Telugu
+          </h3>
 
-</div>
+          <p>
+            SLD AI EDUCATIONS ద్వారా AIని
+            Step-by-Stepగా తెలుగులో నేర్చుకోండి.
+          </p>
 
+        </div>
 
-<div class="video-info">
+      </div>
 
-<h3>
-SLD AI EDUCATIONS – AI Learning in Telugu
-</h3>
+      <!-- VIDEO 2 -->
+      <div class="video-card">
 
-<p>
-తెలుగులో AIని సులభంగా నేర్చుకునేందుకు
-SLD AI EDUCATIONS అందిస్తున్న వీడియో.
-</p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/ShDPHZIyrEs"
+            title="SLD AI EDUCATIONS Video 2"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
 
-</div>
+        <div class="video-content">
 
-</div>
+          <div class="video-number">
+            LESSON 02
+          </div>
 
-</div>
+          <h3>
+            SLD AI EDUCATIONS – AI Tutorial
+          </h3>
+
+          <p>
+            Beginner learners కోసం రూపొందించిన
+            తెలుగు AI Learning Video.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- ABOUT -->
-
 <section id="about">
 
-<div class="container">
+  <div class="container">
 
-<h2 class="section-title">
-ABOUT SLD AI EDUCATIONS
-</h2>
+    <h2 class="section-title">
+      ABOUT SLD AI EDUCATIONS
+    </h2>
 
-<p class="section-text">
-SLD AI CREATIONS వారి Telugu AI Learning Platform
-</p>
+    <p class="section-subtitle">
+      SLD AI CREATIONS వారి Telugu AI Learning Platform
+    </p>
 
+    <div class="about-box">
 
-<div class="about-box">
+      <p>
+        <strong>SLD AI CREATIONS</strong> వారి
+        <strong>SLD AI EDUCATIONS</strong>
+        తెలుగు learners కోసం రూపొందించిన AI Learning Platform.
+        <br><br>
 
-<p>
+        AI గురించి తెలియని Beginner నుంచి Advanced learner వరకు
+        Step-by-Stepగా Artificial Intelligence నేర్చుకునేలా
+        సులభమైన Tutorials, Practical Examples మరియు Guidance
+        అందించడం మా లక్ష్యం.
+      </p>
 
-<strong>SLD AI CREATIONS</strong> వారి
-<strong>SLD AI EDUCATIONS</strong>
-తెలుగు learners కోసం రూపొందించిన AI Learning Platform.
+    </div>
 
-<br><br>
-
-AI గురించి తెలియని Beginner నుంచి
-Advanced learner వరకు Step-by-Stepగా
-Artificial Intelligence నేర్చుకునేలా
-సులభమైన Tutorials, AI Tools Information,
-Prompts మరియు Practical Guidance అందించడం
-మా లక్ష్యం.
-
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
 
-<div class="container">
+  <div class="container">
 
-<h2 class="section-title">
-CONNECT WITH US
-</h2>
+    <h2 class="section-title">
+      CONNECT WITH US
+    </h2>
 
-<p class="section-text">
-SLD AI EDUCATIONSను Follow చేయండి
-</p>
+    <p class="section-subtitle">
+      SLD AI EDUCATIONSను Follow చేయండి
+    </p>
 
+    <div class="contact-buttons">
 
-<div class="contact-buttons">
+      <a
+        href="https://www.youtube.com/@SLDAIEDUCATIONS"
+        target="_blank"
+        rel="noopener">
+        ▶ YouTube
+      </a>
 
-<a
-href="https://www.youtube.com/@SLDAIEDUCATIONS"
-target="_blank">
-▶ YouTube
-</a>
+      <a
+        href="https://www.facebook.com/profile.php?id=61594237880461"
+        target="_blank"
+        rel="noopener">
+        Facebook
+      </a>
 
-<a
-href="https://www.facebook.com/profile.php?id=61594237880461"
-target="_blank">
-Facebook
-</a>
+      <a href="mailto:sldaiedu@gmail.com">
+        ✉ Email
+      </a>
 
-<a
-href="mailto:sldaiedu@gmail.com">
-✉ Email
-</a>
+      <a href="https://sldaiedu.co.in">
+        🌐 Website
+      </a>
 
-<a
-href="https://sldaiedu.co.in">
-🌐 Website
-</a>
+    </div>
 
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 <footer>
 
-<strong>SLD AI CREATIONS వారి</strong>
+  <strong>SLD AI CREATIONS వారి</strong>
+  <br>
 
-<br>
+  SLD AI EDUCATIONS
+  <br>
 
-SLD AI EDUCATIONS
+  Learn • Create • Grow with AI
 
-<br>
+  <br><br>
 
-Learn • Create • Grow with AI
-
-<br><br>
-
-© 2026 SLD AI EDUCATIONS • All Rights Reserved
+  © 2026 SLD AI EDUCATIONS • All Rights Reserved
 
 </footer>
-
 
 </body>
 </html>
