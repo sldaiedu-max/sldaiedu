@@ -8,9 +8,13 @@
 <title>SLD AI EDUCATIONS | Learn AI in Telugu</title>
 
 <meta name="description"
-content="SLD AI EDUCATIONS - Learn AI in Telugu • Create Your Future. ChatGPT, Spoken English, AI Filmmaking, Google Flow and CapCut learning platform.">
+content="SLD AI EDUCATIONS - Learn AI in Telugu • Create Your Future. ChatGPT, AI Filmmaking, Spoken English, Google Flow and CapCut learning platform.">
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 *{
     margin:0;
@@ -25,7 +29,7 @@ html{
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#030d1c;
-    color:white;
+    color:#ffffff;
     line-height:1.6;
 }
 
@@ -34,8 +38,8 @@ img{
 }
 
 .container{
-    width:92%;
-    max-width:1200px;
+    width:94%;
+    max-width:1400px;
     margin:auto;
 }
 
@@ -44,7 +48,9 @@ section{
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     position:sticky;
@@ -57,10 +63,10 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     font-weight:bold;
-    margin:0 14px;
+    margin:0 15px;
     font-size:13px;
 }
 
@@ -69,7 +75,9 @@ nav a:hover{
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:100vh;
@@ -79,15 +87,23 @@ nav a:hover{
     padding:45px 15px 60px;
 
     background:
-    radial-gradient(circle at top,
-    rgba(0,132,255,.30),
-    transparent 36%),
+    radial-gradient(
+        circle at top,
+        rgba(0,132,255,.30),
+        transparent 36%
+    ),
 
-    radial-gradient(circle at bottom right,
-    rgba(255,185,0,.12),
-    transparent 35%),
+    radial-gradient(
+        circle at bottom right,
+        rgba(255,185,0,.12),
+        transparent 35%
+    ),
 
-    linear-gradient(180deg,#061b3c,#020b18);
+    linear-gradient(
+        180deg,
+        #061b3c,
+        #020b18
+    );
 }
 
 .hero-inner{
@@ -96,7 +112,9 @@ nav a:hover{
 }
 
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
 
 .logo-box{
     margin-bottom:15px;
@@ -114,7 +132,9 @@ nav a:hover{
 }
 
 
-/* BRAND */
+/* =========================
+   BRAND
+========================= */
 
 .brand-top{
     color:#ffd75a;
@@ -131,24 +151,27 @@ nav a:hover{
 
     background:
     linear-gradient(
-    90deg,
-    #42c9ff,
-    #ffffff,
-    #ffd75a
+        90deg,
+        #42c9ff,
+        #ffffff,
+        #ffd75a
     );
 
     -webkit-background-clip:text;
+    background-clip:text;
     color:transparent;
 }
 
 
-/* TAGLINE */
+/* =========================
+   TAGLINE
+========================= */
 
 .main-tagline{
     margin-top:13px;
     font-size:27px;
     font-weight:800;
-    color:white;
+    color:#ffffff;
 }
 
 .main-tagline span{
@@ -162,7 +185,9 @@ nav a:hover{
 }
 
 
-/* BANNER */
+/* =========================
+   BANNER
+========================= */
 
 .banner-box{
     margin:32px auto 20px;
@@ -183,24 +208,39 @@ nav a:hover{
 }
 
 
-/* START BUTTON */
+/* =========================
+   START BUTTON
+========================= */
 
 .start-button{
     display:inline-block;
     margin-top:15px;
-    padding:14px 28px;
+    padding:14px 30px;
 
     background:
-    linear-gradient(90deg,#087cff,#00b7ff);
+    linear-gradient(
+        90deg,
+        #087cff,
+        #00b7ff
+    );
 
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     border-radius:10px;
     font-weight:bold;
+
+    box-shadow:
+    0 8px 20px rgba(0,130,255,.35);
+}
+
+.start-button:hover{
+    transform:translateY(-2px);
 }
 
 
-/* TITLES */
+/* =========================
+   SECTION TITLES
+========================= */
 
 .section-title{
     text-align:center;
@@ -217,17 +257,25 @@ nav a:hover{
 }
 
 
-/* APPS */
+/* =========================
+   APPS SECTION
+========================= */
 
 .apps-section{
     background:
-    linear-gradient(180deg,#071a32,#051427);
+    linear-gradient(
+        180deg,
+        #071a32,
+        #051427
+    );
 }
 
 .apps-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:24px;
+    max-width:1100px;
+    margin:auto;
 }
 
 .app-card{
@@ -236,7 +284,11 @@ nav a:hover{
     border-radius:20px;
 
     background:
-    linear-gradient(145deg,#0d2b4d,#07182d);
+    linear-gradient(
+        145deg,
+        #0d2b4d,
+        #07182d
+    );
 
     border:1px solid #286396;
 
@@ -262,28 +314,43 @@ nav a:hover{
 
     border-radius:50%;
 
-    font-size:34px;
+    font-size:32px;
     font-weight:bold;
+
+    box-shadow:
+    0 0 25px rgba(0,170,255,.25);
 }
 
 .chatgpt-icon{
     background:
-    linear-gradient(135deg,#00a98f,#00d7bb);
+    linear-gradient(
+        135deg,
+        #00a98f,
+        #00d7bb
+    );
 }
 
 .flow-icon{
     background:
-    linear-gradient(135deg,#4285f4,#8b5cf6);
+    linear-gradient(
+        135deg,
+        #4285f4,
+        #8b5cf6
+    );
 }
 
 .capcut-icon{
     background:
-    linear-gradient(135deg,#111111,#4a6278);
+    linear-gradient(
+        135deg,
+        #111111,
+        #4a6278
+    );
 }
 
 .app-card h3{
     font-size:26px;
-    color:white;
+    color:#ffffff;
     margin-bottom:10px;
 }
 
@@ -296,38 +363,60 @@ nav a:hover{
 .app-button{
     display:inline-block;
     padding:12px 20px;
+
     border-radius:9px;
     text-decoration:none;
-    color:white;
+
+    color:#ffffff;
     font-weight:bold;
 
     background:
-    linear-gradient(90deg,#0784ff,#00b7ff);
+    linear-gradient(
+        90deg,
+        #0784ff,
+        #00b7ff
+    );
+}
+
+.app-button:hover{
+    opacity:.88;
 }
 
 
-/* VIDEOS */
+/* =========================
+   VIDEO SECTION
+========================= */
 
 .videos{
     background:#041020;
 }
 
+
+/* 4 VIDEOS PER ROW */
+
 .video-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:26px;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
+
+
+/* VIDEO CARD */
 
 .video-card{
     background:
-    linear-gradient(180deg,#0c2949,#07182d);
+    linear-gradient(
+        180deg,
+        #0c2949,
+        #07182d
+    );
 
     border:1px solid #20547f;
-    border-radius:18px;
+    border-radius:16px;
     overflow:hidden;
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.35);
+    0 12px 30px rgba(0,0,0,.35);
 
     transition:.3s;
 }
@@ -337,12 +426,15 @@ nav a:hover{
     border-color:#ffc93d;
 }
 
+
+/* YOUTUBE 16:9 */
+
 .video-wrapper{
     position:relative;
     width:100%;
     padding-bottom:56.25%;
     height:0;
-    background:black;
+    background:#000000;
 }
 
 .video-wrapper iframe{
@@ -354,12 +446,15 @@ nav a:hover{
     border:0;
 }
 
+
+/* VIDEO TEXT */
+
 .video-content{
-    padding:20px;
+    padding:17px;
 }
 
 .course-name{
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
     color:#ffd75a;
     margin-bottom:5px;
@@ -367,30 +462,39 @@ nav a:hover{
 
 .video-content h3{
     color:#72d2ff;
-    font-size:22px;
+    font-size:19px;
     margin-bottom:7px;
 }
 
 .video-content p{
     color:#b6c8d9;
-    font-size:15px;
+    font-size:14px;
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about{
     background:
-    linear-gradient(180deg,#071a30,#051427);
+    linear-gradient(
+        180deg,
+        #071a30,
+        #051427
+    );
 }
 
 .about-card{
     max-width:950px;
     margin:auto;
     padding:40px 30px;
+
     text-align:center;
+
     border-radius:20px;
     border:1px solid #24537c;
+
     background:#091f39;
     color:#c4d5e4;
 }
@@ -400,7 +504,9 @@ nav a:hover{
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
     background:#030d1c;
@@ -415,13 +521,20 @@ nav a:hover{
 
 .contact-buttons a{
     min-width:150px;
+
     text-align:center;
+
     padding:14px 20px;
+
     border-radius:10px;
+
     text-decoration:none;
-    color:white;
+
+    color:#ffffff;
     font-weight:bold;
+
     background:#0c3158;
+
     border:1px solid #28638f;
 }
 
@@ -430,12 +543,17 @@ nav a:hover{
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     text-align:center;
+
     background:#010610;
+
     padding:35px 15px;
+
     color:#8ca4ba;
 }
 
@@ -445,23 +563,35 @@ footer strong{
 
 .footer-tagline{
     margin-top:7px;
-    color:white;
+    color:#ffffff;
 }
 
 
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
 
-@media(max-width:900px){
+@media(max-width:1100px){
+
+    .video-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
 
     .apps-grid{
         grid-template-columns:1fr;
     }
 
-    .video-grid{
-        grid-template-columns:1fr;
-    }
-
 }
+
 
 @media(max-width:700px){
 
@@ -497,16 +627,28 @@ footer strong{
         font-size:28px;
     }
 
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
 }
+
+
+/* =========================
+   END CSS
+========================= */
 
 </style>
 
 </head>
 
+
 <body>
 
 
-<!-- MENU -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -523,12 +665,17 @@ footer strong{
 </nav>
 
 
-<!-- HOME -->
+
+<!-- =========================
+     HOME
+========================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-inner">
 
+
+<!-- LOGO -->
 
 <div class="logo-box">
 
@@ -569,6 +716,8 @@ Create Your Future
 </div>
 
 
+<!-- BANNER -->
+
 <div class="banner-box">
 
 <img
@@ -578,7 +727,9 @@ alt="SLD AI EDUCATIONS Banner">
 </div>
 
 
-<a href="#apps" class="start-button">
+<a
+href="#apps"
+class="start-button">
 
 🚀 START LEARNING
 
@@ -590,9 +741,14 @@ alt="SLD AI EDUCATIONS Banner">
 </section>
 
 
-<!-- APPS -->
 
-<section class="apps-section" id="apps">
+<!-- =========================
+     APPS
+========================= -->
+
+<section
+class="apps-section"
+id="apps">
 
 <div class="container">
 
@@ -624,19 +780,24 @@ AI
 
 </div>
 
+
 <h3>
 
 ChatGPT
 
 </h3>
 
+
 <p>
 
-Prompts తయారు చేయండి, Questions అడగండి,
-Content రాయండి, Ideas పొందండి మరియు
+Prompts తయారు చేయండి,
+Questions అడగండి,
+Content రాయండి,
+Ideas పొందండి మరియు
 AIని Step-by-Stepగా నేర్చుకోండి.
 
 </p>
+
 
 <a
 href="https://chatgpt.com/"
@@ -651,6 +812,7 @@ OPEN CHATGPT ↗
 </div>
 
 
+
 <!-- GOOGLE FLOW -->
 
 <div class="app-card">
@@ -661,18 +823,22 @@ OPEN CHATGPT ↗
 
 </div>
 
+
 <h3>
 
 Google Flow
 
 </h3>
 
+
 <p>
 
-AIతో Images, Scenes మరియు Cinematic Videos
-రూపొందించడానికి Google Flowను ఉపయోగించండి.
+AIతో Images, Scenes మరియు
+Cinematic Videos రూపొందించడానికి
+Google Flowను ఉపయోగించండి.
 
 </p>
+
 
 <a
 href="https://labs.google/fx/tools/flow"
@@ -687,6 +853,7 @@ OPEN GOOGLE FLOW ↗
 </div>
 
 
+
 <!-- CAPCUT -->
 
 <div class="app-card">
@@ -697,19 +864,23 @@ OPEN GOOGLE FLOW ↗
 
 </div>
 
+
 <h3>
 
 CapCut
 
 </h3>
 
+
 <p>
 
-Video Editing, Music, Text, Effects,
-Transitions, Reels, Shorts మరియు
+Video Editing, Music, Text,
+Effects, Transitions,
+Reels, Shorts మరియు
 YouTube Videos edit చేయండి.
 
 </p>
+
 
 <a
 href="https://www.capcut.com/"
@@ -731,9 +902,14 @@ OPEN CAPCUT ↗
 </section>
 
 
-<!-- VIDEOS -->
 
-<section class="videos" id="videos">
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section
+class="videos"
+id="videos">
 
 <div class="container">
 
@@ -747,7 +923,7 @@ OPEN CAPCUT ↗
 
 <p class="section-subtitle">
 
-SLD AI EDUCATIONS • Telugu Learning Videos
+SLD AI EDUCATIONS • Step-by-Step Telugu Learning
 
 </p>
 
@@ -755,7 +931,11 @@ SLD AI EDUCATIONS • Telugu Learning Videos
 <div class="video-grid">
 
 
-<!-- CHATGPT VERSION 1 -->
+
+<!-- ========================
+     VIDEO 1
+     AI FILMMAKING DAY 1
+======================== -->
 
 <div class="video-card">
 
@@ -763,7 +943,7 @@ SLD AI EDUCATIONS • Telugu Learning Videos
 
 <iframe
 src="https://www.youtube.com/embed/ShDPHZIyrEs"
-title="ChatGPT Version 1"
+title="AI Filmmaking Day 1"
 loading="lazy"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
@@ -771,173 +951,6 @@ allowfullscreen>
 
 </div>
 
-<div class="video-content">
-
-<div class="course-name">
-
-🤖 CHATGPT COURSE
-
-</div>
-
-<h3>
-
-ChatGPT — Version 1
-
-</h3>
-
-<p>
-
-ChatGPTను Beginner నుంచి Step-by-Stepగా
-తెలుగులో నేర్చుకోండి.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- CHATGPT VERSION 2 -->
-
-<div class="video-card">
-
-<div class="video-wrapper">
-
-<iframe
-src="https://www.youtube.com/embed/ub4NDx4NqqE"
-title="ChatGPT Version 2"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="video-content">
-
-<div class="course-name">
-
-🤖 CHATGPT COURSE
-
-</div>
-
-<h3>
-
-ChatGPT — Version 2
-
-</h3>
-
-<p>
-
-ChatGPTను ఇంకా Practicalగా ఉపయోగించడం
-తెలుగులో Step-by-Stepగా నేర్చుకోండి.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- CHATGPT VERSION 3 -->
-
-<div class="video-card">
-
-<div class="video-wrapper">
-
-<iframe
-src="https://www.youtube.com/embed/7V-5X1CLxFc"
-title="ChatGPT Version 3"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="video-content">
-
-<div class="course-name">
-
-🤖 CHATGPT COURSE
-
-</div>
-
-<h3>
-
-ChatGPT — Version 3
-
-</h3>
-
-<p>
-
-ChatGPT Advanced Practical Usesను
-తెలుగులో సులభంగా నేర్చుకోండి.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- SPOKEN ENGLISH VERSION 1 -->
-
-<div class="video-card">
-
-<div class="video-wrapper">
-
-<iframe
-src="https://www.youtube.com/embed/EgrSTP0a_ho"
-title="Spoken English Version 1"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="video-content">
-
-<div class="course-name">
-
-🗣️ SPOKEN ENGLISH COURSE
-
-</div>
-
-<h3>
-
-Spoken English — Version 1
-
-</h3>
-
-<p>
-
-తెలుగు ద్వారా Spoken Englishను
-Beginner నుంచి సులభంగా నేర్చుకోండి.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- AI FILMMAKING COURSE VERSION 1 -->
-
-<div class="video-card">
-
-<div class="video-wrapper">
-
-<iframe
-src="https://www.youtube.com/embed/FzxzsqIyhuQ?start=5"
-title="AI Filmmaking Course Version 1"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
 
 <div class="video-content">
 
@@ -947,16 +960,223 @@ allowfullscreen>
 
 </div>
 
+
 <h3>
 
-AI Filmmaking Course — Version 1
+AI Filmmaking — Day 1
 
 </h3>
 
+
 <p>
 
-Story → Character → Scene → Image → Video
-workflowను Step-by-Stepగా తెలుగులో నేర్చుకోండి.
+AI Filmmaking అంటే ఏమిటి?
+Story → Character → Scene →
+Image → Video workflowను
+తెలుగులో నేర్చుకోండి.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================
+     VIDEO 2
+     CHATGPT DAY 1
+======================== -->
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<iframe
+src="https://www.youtube.com/embed/ub4NDx4NqqE?start=51"
+title="ChatGPT Day 1"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="video-content">
+
+<div class="course-name">
+
+🤖 CHATGPT COURSE
+
+</div>
+
+
+<h3>
+
+ChatGPT — Day 1
+
+</h3>
+
+
+<p>
+
+ChatGPT Basics మరియు
+ChatGPTను ఎలా ఉపయోగించాలో
+Beginner నుంచి తెలుగులో
+Step-by-Stepగా నేర్చుకోండి.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================
+     VIDEO 3
+     CHATGPT DAY 2
+======================== -->
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<iframe
+src="https://www.youtube.com/embed/7V-5X1CLxFc?start=40"
+title="ChatGPT Day 2"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="video-content">
+
+<div class="course-name">
+
+🤖 CHATGPT COURSE
+
+</div>
+
+
+<h3>
+
+ChatGPT — Day 2
+
+</h3>
+
+
+<p>
+
+ChatGPTలో మంచి Prompt ఎలా
+రాయాలి మరియు Practicalగా
+ఎలా ఉపయోగించాలో తెలుగులో
+నేర్చుకోండి.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================
+     VIDEO 4
+     CHATGPT DAY 2
+======================== -->
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<iframe
+src="https://www.youtube.com/embed/EgrSTP0a_ho"
+title="ChatGPT Day 2"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="video-content">
+
+<div class="course-name">
+
+🤖 CHATGPT COURSE
+
+</div>
+
+
+<h3>
+
+ChatGPT — Day 2
+
+</h3>
+
+
+<p>
+
+ChatGPT Practical Usesను
+Step-by-Stepగా తెలుగులో
+నేర్చుకోండి.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================
+     VIDEO 5
+     SPOKEN ENGLISH DAY 1
+======================== -->
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<iframe
+src="https://www.youtube.com/embed/FzxzsqIyhuQ?start=316"
+title="Spoken English Day 1"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="video-content">
+
+<div class="course-name">
+
+🗣️ SPOKEN ENGLISH COURSE
+
+</div>
+
+
+<h3>
+
+Spoken English — Day 1
+
+</h3>
+
+
+<p>
+
+Basic Spoken Englishను
+తెలుగు ద్వారా Beginner నుంచి
+Step-by-Stepగా సులభంగా
+నేర్చుకోండి.
 
 </p>
 
@@ -972,9 +1192,14 @@ workflowను Step-by-Stepగా తెలుగులో నేర్చుక
 </section>
 
 
-<!-- ABOUT -->
 
-<section class="about" id="about">
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+class="about"
+id="about">
 
 <div class="container">
 
@@ -997,23 +1222,39 @@ SLD AI CREATIONS వారి Telugu Learning Platform
 
 <p>
 
-<strong>SLD AI CREATIONS</strong> వారి
-<strong>SLD AI EDUCATIONS</strong>
+<strong>
+SLD AI CREATIONS
+</strong>
+
+వారి
+
+<strong>
+SLD AI EDUCATIONS
+</strong>
+
 తెలుగు learners కోసం రూపొందించిన
 Learning Platform.
 
 <br><br>
 
-ChatGPT, Artificial Intelligence,
-AI Filmmaking, Spoken English,
-Google Flow, CapCut వంటి useful skillsను
-Beginner నుంచి Step-by-Stepగా తెలుగులో
-సులభంగా నేర్పించడం మా లక్ష్యం.
+Beginner నుంచి Step-by-Stepగా
+<strong>ChatGPT</strong>,
+<strong>AI Filmmaking</strong>,
+<strong>Spoken English</strong>,
+Google Flow, CapCut,
+AI Tools, Prompt Engineering,
+AI Image Creation,
+AI Video Creation మరియు
+Automationకు సంబంధించిన
+Learning Content అందించడం
+మా లక్ష్యం.
 
 <br><br>
 
 <strong>
+
 Learn AI in Telugu • Create Your Future
+
 </strong>
 
 </p>
@@ -1025,9 +1266,14 @@ Learn AI in Telugu • Create Your Future
 </section>
 
 
-<!-- CONTACT -->
 
-<section class="contact" id="contact">
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="contact"
+id="contact">
 
 <div class="container">
 
@@ -1042,13 +1288,15 @@ CONNECT WITH US
 <p class="section-subtitle">
 
 SLD AI EDUCATIONSను Follow చేయండి •
-Videosను Friends & Familyతో Share చేయండి
+Learning Videosను Friends & Familyతో Share చేయండి
 
 </p>
 
 
 <div class="contact-buttons">
 
+
+<!-- YOUTUBE -->
 
 <a
 href="https://www.youtube.com/@SLDAIEDUCATIONS"
@@ -1060,6 +1308,9 @@ rel="noopener">
 </a>
 
 
+
+<!-- FACEBOOK -->
+
 <a
 href="https://www.facebook.com/profile.php?id=61594237880461"
 target="_blank"
@@ -1070,14 +1321,24 @@ rel="noopener">
 </a>
 
 
-<a href="mailto:sldaiedu@gmail.com">
+
+<!-- EMAIL -->
+
+<a
+href="mailto:sldaiedu@gmail.com">
 
 ✉ Email
 
 </a>
 
 
-<a href="https://sldaiedu.co.in">
+
+<!-- WEBSITE -->
+
+<a
+href="https://sldaiedu.co.in"
+target="_blank"
+rel="noopener">
 
 🌐 Website
 
@@ -1091,7 +1352,10 @@ rel="noopener">
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1105,15 +1369,20 @@ SLD AI CREATIONS వారి
 
 SLD AI EDUCATIONS
 
+
 <div class="footer-tagline">
 
 Learn AI in Telugu • Create Your Future
 
 </div>
 
+
 <br>
 
-తెలుగులో నేర్చుకోండి • Practice చేయండి • Create చేయండి • Grow అవ్వండి
+తెలుగులో నేర్చుకోండి •
+Practice చేయండి •
+Create చేయండి •
+Grow అవ్వండి
 
 <br><br>
 
