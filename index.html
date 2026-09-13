@@ -397,19 +397,6 @@ img{display:block;max-width:100%}
 
 
 
-<div class="android-modal" id="androidInstallModal" aria-hidden="true">
-  <div class="android-card">
-    <h3>🤖 Android App Install</h3>
-    <p>Chrome native install popup ప్రస్తుతం browser నుంచి అందుబాటులో లేదు.</p>
-    <ol class="steps">
-      <li>Chromeలో పై కుడి <b>⋮</b> menu నొక్కండి.</li>
-      <li><b>Install app</b> లేదా <b>Add to Home screen</b> ఎంచుకోండి.</li>
-      <li><b>Install / Add</b> నొక్కండి.</li>
-    </ol>
-    <button class="android-close" id="androidCloseBtn" type="button">OK</button>
-  </div>
-</div>
-
 <div class="ios-modal" id="iosInstallModal" aria-hidden="true">
   <div class="ios-card">
     <h3>🍎 iPhoneలో App Install</h3>
@@ -439,26 +426,39 @@ function isStandaloneApp() {
 /* Register service worker */
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
-    navigator.serviceWorker.register("./sw.js").catch(function (err) {
-      console.error("Service worker registration failed:", err);
-    });
+    navigator.serviceWorker.register("./sw.js", { scope: "./" })
+      .then(function (registration) {
+        console.log("Service worker registered:", registration.scope);
+      })
+      .catch(function (err) {
+        console.error("Service worker registration failed:", err);
+      });
   });
 }
 
-/* Capture Chrome's native install event whenever it becomes available */
+/* Chrome/Edge on Android exposes this only when the PWA is installable. */
 window.addEventListener("beforeinstallprompt", function (event) {
   event.preventDefault();
   deferredPrompt = event;
 
+  const androidBtn = document.getElementById("installAppBtn");
   const note = document.getElementById("installNote");
+  if (androidBtn && !isStandaloneApp()) {
+    androidBtn.disabled = false;
+    androidBtn.style.opacity = "1";
+  }
   if (note && !isStandaloneApp()) {
-    note.textContent = "✅ Androidలో ANDROID INSTALL నొక్కితే direct install popup వస్తుంది.";
+    note.textContent = "✅ App install సిద్ధంగా ఉంది — ANDROID INSTALL నొక్కండి.";
   }
 });
 
 window.addEventListener("appinstalled", function () {
   deferredPrompt = null;
+  const androidBtn = document.getElementById("installAppBtn");
+  const iphoneBtn = document.getElementById("iphoneInstallBtn");
   const note = document.getElementById("installNote");
+  if (androidBtn) androidBtn.style.display = "none";
+  if (iphoneBtn) iphoneBtn.style.display = "none";
   if (note) note.textContent = "✅ SLD AI EDUCATIONS App install అయింది.";
 });
 
@@ -466,64 +466,37 @@ document.addEventListener("DOMContentLoaded", function () {
   const androidBtn = document.getElementById("installAppBtn");
   const iphoneBtn = document.getElementById("iphoneInstallBtn");
   const installNote = document.getElementById("installNote");
-
-  const androidModal = document.getElementById("androidInstallModal");
-  const androidCloseBtn = document.getElementById("androidCloseBtn");
-
   const iosModal = document.getElementById("iosInstallModal");
   const iosCloseBtn = document.getElementById("iosCloseBtn");
 
-  /* Hide install controls inside the already-installed standalone app */
   if (isStandaloneApp()) {
     if (androidBtn) androidBtn.style.display = "none";
     if (iphoneBtn) iphoneBtn.style.display = "none";
     if (installNote) installNote.style.display = "none";
+    return;
   }
 
-  /* Android: one click -> native Chrome install prompt, when Chrome exposes it */
   if (androidBtn) {
     androidBtn.addEventListener("click", async function () {
-      if (isStandaloneApp()) return;
-
       if (deferredPrompt) {
         try {
           deferredPrompt.prompt();
           const choice = await deferredPrompt.userChoice;
-
           if (installNote) {
-            installNote.textContent =
-              choice.outcome === "accepted"
-                ? "✅ Install ప్రారంభమైంది."
-                : "Install cancel చేశారు. కావాలంటే మళ్లీ ANDROID INSTALL నొక్కండి.";
+            installNote.textContent = choice.outcome === "accepted"
+              ? "✅ Install ప్రారంభమైంది."
+              : "Install cancel చేశారు. Chrome మళ్లీ prompt అందించినప్పుడు ప్రయత్నించండి.";
           }
-
           deferredPrompt = null;
           return;
-        } catch (e) {
-          console.error(e);
+        } catch (err) {
+          console.error("Install prompt error:", err);
         }
       }
 
-      /* Chrome did not expose the native prompt: show the correct fallback */
-      if (androidModal) {
-        androidModal.classList.add("show");
-        androidModal.setAttribute("aria-hidden", "false");
-      }
+      /* Browsers do not allow websites to force the native prompt. */
       if (installNote) {
-        installNote.textContent = "Chrome native install popup అందుబాటులో లేకపోతే ⋮ → Install app / Add to Home screen ఉపయోగించండి.";
-      }
-    });
-  }
-
-  if (androidCloseBtn && androidModal) {
-    androidCloseBtn.addEventListener("click", function () {
-      androidModal.classList.remove("show");
-      androidModal.setAttribute("aria-hidden", "true");
-    });
-    androidModal.addEventListener("click", function (event) {
-      if (event.target === androidModal) {
-        androidModal.classList.remove("show");
-        androidModal.setAttribute("aria-hidden", "true");
+        installNote.textContent = "ℹ️ Chrome ⋮ Menu → Install app / Add to Home screen ఎంచుకోండి.";
       }
     });
   }
