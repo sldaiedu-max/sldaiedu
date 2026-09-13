@@ -14,7 +14,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,6 +68,7 @@ img{display:block;max-width:100%}
 }
 .start-btn{background:linear-gradient(90deg,#0577e6,#00b7ff)}
 .install-btn{background:linear-gradient(90deg,#0e8f4e,#20c974)}
+.iphone-btn{background:linear-gradient(90deg,#334155,#64748b)}
 .install-note{margin-top:10px;color:#9ec9e8;font-size:12px;min-height:18px}
 
 /* COMMON */
@@ -154,6 +155,24 @@ img{display:block;max-width:100%}
   .bottom-nav span{font-size:18px}
   .bottom-nav a:first-child{color:#55caff}
 }
+
+.ios-modal{
+  position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.72);padding:20px
+}
+.ios-modal.show{display:flex}
+.ios-card{
+  width:min(92vw,430px);background:#0b1727;border:1px solid #2f5d86;border-radius:22px;
+  padding:22px;box-shadow:0 24px 70px rgba(0,0,0,.45);text-align:left
+}
+.ios-card h3{margin:0 0 10px;color:#fff;font-size:22px}
+.ios-card p{margin:8px 0;color:#c9d9e8;line-height:1.6}
+.ios-card ol{margin:14px 0 18px;padding-left:20px;color:#eaf4ff;line-height:1.8}
+.ios-close{
+  width:100%;border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer;
+  background:#2563eb;color:#fff
+}
+
 </style>
 </head>
 
@@ -188,6 +207,7 @@ img{display:block;max-width:100%}
     <div class="hero-actions">
       <a class="start-btn" href="#tools">🚀 START LEARNING</a>
       <button class="install-btn" id="installAppBtn">📲 INSTALL APP</button>
+      <button class="install-btn iphone-btn" id="iphoneInstallBtn" type="button">🍎 IPHONE INSTALL</button>
     </div>
     <div class="install-note" id="installNote"></div>
   </div>
@@ -353,6 +373,22 @@ img{display:block;max-width:100%}
   <a href="https://wa.me/918464853033" target="_blank" rel="noopener"><span>💬</span>WHATSAPP</a>
 </nav>
 
+
+<div class="ios-modal" id="iosInstallModal" aria-hidden="true">
+  <div class="ios-card">
+    <h3>🍎 iPhoneలో App Install</h3>
+    <p>iPhoneలో Safari ద్వారా ఇలా install చేయండి:</p>
+    <ol>
+      <li>ఈ websiteను <b>Safari</b>లో open చేయండి.</li>
+      <li><b>Share</b> (⬆️) icon నొక్కండి.</li>
+      <li><b>Add to Home Screen</b> ఎంచుకోండి.</li>
+      <li><b>Add</b> నొక్కండి.</li>
+    </ol>
+    <button class="ios-close" id="iosCloseBtn" type="button">OK</button>
+  </div>
+</div>
+
+
 <script>
 /* PWA service worker */
 if ("serviceWorker" in navigator) {
@@ -404,6 +440,36 @@ installBtn.addEventListener("click", async () => {
 
 window.addEventListener("appinstalled", () => {
   installNote.textContent = "✅ SLD AI EDUCATIONS App విజయవంతంగా install అయింది.";
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const iphoneBtn = document.getElementById("iphoneInstallBtn");
+  const iosModal = document.getElementById("iosInstallModal");
+  const iosCloseBtn = document.getElementById("iosCloseBtn");
+
+  if (iphoneBtn && iosModal) {
+    iphoneBtn.addEventListener("click", function () {
+      iosModal.classList.add("show");
+      iosModal.setAttribute("aria-hidden", "false");
+    });
+  }
+
+  if (iosCloseBtn && iosModal) {
+    iosCloseBtn.addEventListener("click", function () {
+      iosModal.classList.remove("show");
+      iosModal.setAttribute("aria-hidden", "true");
+    });
+
+    iosModal.addEventListener("click", function (event) {
+      if (event.target === iosModal) {
+        iosModal.classList.remove("show");
+        iosModal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
 });
 </script>
 
