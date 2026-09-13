@@ -407,22 +407,5 @@ window.addEventListener("appinstalled", () => {
 });
 </script>
 
-
-<script id="standalone-install-cleanup">
-document.addEventListener("DOMContentLoaded", function () {
-  const installButton = document.getElementById("installAppBtn");
-  const installNote = document.getElementById("installNote");
-
-  const isInstalled =
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true;
-
-  if (isInstalled) {
-    if (installButton) installButton.style.display = "none";
-    if (installNote) installNote.style.display = "none";
-  }
-});
-</script>
-
 </body>
 </html>
