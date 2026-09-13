@@ -68,7 +68,6 @@ img{display:block;max-width:100%}
 }
 .start-btn{background:linear-gradient(90deg,#0577e6,#00b7ff)}
 .install-btn{background:linear-gradient(90deg,#0e8f4e,#20c974)}
-.install-btn[hidden]{display:none}
 .install-note{margin-top:10px;color:#9ec9e8;font-size:12px;min-height:18px}
 
 /* COMMON */
@@ -188,7 +187,7 @@ img{display:block;max-width:100%}
 
     <div class="hero-actions">
       <a class="start-btn" href="#tools">🚀 START LEARNING</a>
-      <button class="install-btn" id="installAppBtn" hidden>📲 INSTALL APP</button>
+      <button class="install-btn" id="installAppBtn">📲 INSTALL APP</button>
     </div>
     <div class="install-note" id="installNote"></div>
   </div>
@@ -401,11 +400,9 @@ installBtn.addEventListener("click", async () => {
   }
 
   deferredPrompt = null;
-  installBtn.hidden = true;
 });
 
 window.addEventListener("appinstalled", () => {
-  installBtn.hidden = true;
   installNote.textContent = "✅ SLD AI EDUCATIONS App విజయవంతంగా install అయింది.";
 });
 </script>
