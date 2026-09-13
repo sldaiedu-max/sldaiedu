@@ -14,7 +14,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -386,7 +386,12 @@ window.addEventListener("beforeinstallprompt", (event) => {
 
 installBtn.addEventListener("click", async () => {
   if (!deferredPrompt) {
-    installNote.textContent = "Chrome menu → Add to Home screen / Install app ద్వారా కూడా install చేయవచ్చు.";
+    const isIOS = /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+    if (isIOS) {
+      installNote.textContent = "iPhoneలో Safari → Share → Add to Home Screen నొక్కి App install చేయండి.";
+    } else {
+      installNote.textContent = "Chrome menu → Add to Home screen / Install app ద్వారా కూడా install చేయవచ్చు.";
+    }
     return;
   }
 
