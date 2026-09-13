@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="te">
-
 <head>
-
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>SLD AI EDUCATIONS | Learn AI in Telugu</title>
 
 <meta name="description"
-content="SLD AI EDUCATIONS - Learn ChatGPT, Google Flow, CapCut, Canva, AI Filmmaking and Spoken English in Telugu Step-by-Step.">
+content="SLD AI EDUCATIONS - ChatGPT, Google Flow, CapCut, Canva, AI Filmmaking and Spoken English Courses in Telugu.">
+
+<meta name="theme-color" content="#071426">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style"
+content="black-translucent">
+
+<meta name="apple-mobile-web-app-title"
+content="SLD AI EDUCATIONS">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
 
-/* ==============================
-   BASIC
-============================== */
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -29,373 +50,498 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#030d1c;
-    color:#ffffff;
-    line-height:1.6;
+    font-family:
+    "Space Grotesk",
+    "Noto Sans Telugu",
+    Arial,
+    sans-serif;
+
+    background:#050d18;
+    color:#f8fafc;
+
+    min-height:100vh;
+
+    padding-bottom:82px;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 img{
+    display:block;
     max-width:100%;
 }
 
 .container{
-    width:94%;
-    max-width:1400px;
+    width:92%;
+    max-width:1200px;
     margin:auto;
 }
 
-section{
-    padding:65px 15px;
-}
 
+/* =====================================================
+   HEADER
+===================================================== */
 
-/* ==============================
-   NAVIGATION
-============================== */
-
-nav{
+.top-header{
     position:sticky;
     top:0;
-    z-index:9999;
-    background:rgba(2,13,29,.98);
-    border-bottom:1px solid #164b80;
-    text-align:center;
-    padding:14px 5px;
+
+    z-index:1000;
+
+    background:rgba(5,13,24,.94);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid #18324d;
 }
 
-nav a{
-    color:#ffffff;
-    text-decoration:none;
-    font-weight:bold;
-    margin:0 15px;
-    font-size:13px;
+.header-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:11px 4%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
 }
 
-nav a:hover{
-    color:#ffd75a;
+.brand-wrap{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
+.header-logo{
+    width:48px;
+    height:48px;
 
-/* ==============================
-   HERO
-============================== */
-
-.hero{
-    text-align:center;
-    background:
-    radial-gradient(circle at top,rgba(0,132,255,.30),transparent 38%),
-    radial-gradient(circle at bottom right,rgba(255,193,7,.10),transparent 30%),
-    linear-gradient(180deg,#061b3c,#020b18);
-
-    padding:50px 15px 65px;
-}
-
-.logo{
-    width:190px;
-    height:190px;
     border-radius:50%;
+
     object-fit:cover;
 
+    border:2px solid #1a8cff;
+
     box-shadow:
-    0 0 25px rgba(0,153,255,.45),
-    0 0 50px rgba(255,215,90,.12);
+    0 0 15px rgba(0,153,255,.25);
 }
 
-.brand{
+.brand-title{
+    font-weight:800;
+
+    font-size:16px;
+
+    color:#ffffff;
+
+    line-height:1.2;
+}
+
+.brand-small{
+    font-size:11px;
+
+    color:#8faac1;
+
+    margin-top:3px;
+}
+
+.pro-badge{
+    display:inline-block;
+
+    margin-left:5px;
+
+    padding:2px 6px;
+
+    border-radius:5px;
+
+    font-size:9px;
+
+    background:#103b60;
+
+    color:#67d2ff;
+}
+
+.whatsapp-top{
+    padding:9px 13px;
+
+    border-radius:25px;
+
+    background:#123d2b;
+
+    border:1px solid #1d9457;
+
+    color:#69e6a2;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    padding:34px 0 28px;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(0,153,255,.23),
+        transparent 40%
+    ),
+    linear-gradient(
+        180deg,
+        #07182d,
+        #050d18
+    );
+}
+
+.main-logo{
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    border:3px solid #1188e8;
+
+    box-shadow:
+    0 0 30px rgba(0,153,255,.25);
+}
+
+.parent-brand{
     color:#ffd75a;
-    font-weight:bold;
-    margin-top:12px;
-    font-size:17px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-top:13px;
 }
 
 .hero h1{
-    font-size:52px;
-    line-height:1.2;
+    font-size:38px;
+
+    line-height:1.15;
+
+    margin-top:4px;
 
     background:
     linear-gradient(
         90deg,
-        #42c9ff,
+        #55d5ff,
         #ffffff,
         #ffd75a
     );
 
     -webkit-background-clip:text;
+
     background-clip:text;
+
     color:transparent;
 }
 
-.tag{
-    font-size:25px;
-    font-weight:bold;
-    margin:10px 0;
+.hero-tag{
+    margin-top:8px;
+
+    font-size:18px;
+
+    font-weight:700;
 }
 
-.telugu{
+.hero-telugu{
+    margin-top:5px;
+
     color:#8fd7ff;
-    font-size:17px;
+
+    font-size:14px;
 }
 
-.banner{
-    max-width:1180px;
-    margin:30px auto;
-
-    border-radius:18px;
-    overflow:hidden;
-
-    border:1px solid #2872aa;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.35);
-}
-
-.banner img{
-    display:block;
-    width:100%;
-}
-
-.btn{
+.free-badge{
     display:inline-block;
 
-    padding:12px 20px;
+    margin-top:18px;
 
-    background:
-    linear-gradient(
-        90deg,
-        #087cff,
-        #00b7ff
-    );
-
-    color:#ffffff;
-    text-decoration:none;
-
-    border-radius:9px;
-
-    font-weight:bold;
-}
-
-.btn:hover{
-    opacity:.88;
-}
-
-
-/* ==============================
-   TITLES
-============================== */
-
-.title{
-    text-align:center;
-    color:#ffd75a;
-    font-size:35px;
-    margin-bottom:5px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#9eb7d1;
-    margin-bottom:35px;
-}
-
-
-/* ==============================
-   APPS
-============================== */
-
-.apps{
-    background:
-    linear-gradient(
-        180deg,
-        #07182d,
-        #041426
-    );
-}
-
-.app-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-    max-width:1350px;
-    margin:auto;
-}
-
-.app-card{
-    background:
-    linear-gradient(
-        145deg,
-        #0d2b4d,
-        #07182d
-    );
-
-    border:1px solid #286396;
+    padding:7px 13px;
 
     border-radius:20px;
 
-    padding:25px;
+    background:#103b60;
 
-    display:flex;
-    flex-direction:column;
+    border:1px solid #176da5;
 
-    transition:.3s;
+    color:#77d9ff;
+
+    font-size:12px;
+
+    font-weight:700;
 }
 
-.app-card:hover{
-    transform:translateY(-6px);
+.banner{
+    margin:22px auto 0;
 
-    border-color:#ffd75a;
+    max-width:1050px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #1e527d;
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.35);
+    0 15px 40px rgba(0,0,0,.28);
 }
 
-.tool-icon{
-    width:75px;
-    height:75px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    margin:0 auto 15px;
-
-    font-size:29px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #087cff,
-        #00c7ff
-    );
+.banner img{
+    width:100%;
 }
 
-.app-card h3{
-    text-align:center;
-    color:#72d2ff;
-    font-size:26px;
-}
+.start-btn{
+    display:inline-block;
 
-.tool-category{
-    text-align:center;
-    color:#ffd75a;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:18px;
-}
+    margin-top:22px;
 
-.description{
-    color:#c4d5e4;
-    font-size:14px;
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.plan{
-    background:#06182b;
-
-    border:1px solid #234f73;
-
-    border-radius:12px;
-
-    padding:14px;
-
-    margin-bottom:12px;
-}
-
-.plan h4{
-    margin-bottom:6px;
-}
-
-.plan p{
-    color:#b7c9d9;
-    font-size:13px;
-}
-
-.free-plan h4{
-    color:#70f0a1;
-}
-
-.paid-plan h4{
-    color:#ffd75a;
-}
-
-.premium-plan h4{
-    color:#8acaff;
-}
-
-.best-for{
-    margin-top:8px;
-
-    padding:13px;
+    padding:12px 22px;
 
     border-radius:10px;
-
-    background:#0a2947;
-
-    color:#bcd3e6;
-
-    font-size:13px;
-}
-
-.best-for strong{
-    color:#ffd75a;
-}
-
-.tool-button{
-    display:block;
-
-    text-align:center;
-
-    margin-top:auto;
-
-    padding:12px 15px;
-
-    border-radius:9px;
 
     background:
     linear-gradient(
         90deg,
-        #087cff,
+        #0577e6,
         #00b7ff
     );
 
     color:#ffffff;
 
-    text-decoration:none;
-
-    font-weight:bold;
+    font-weight:800;
 }
 
-.plan-note{
-    max-width:1050px;
 
-    margin:30px auto 0;
+/* =====================================================
+   COMMON SECTION
+===================================================== */
 
-    background:#0a2947;
+.section{
+    padding:55px 0;
+}
 
-    border:1px solid #2b6695;
+.section-dark{
+    background:#071426;
+}
 
-    border-radius:12px;
+.section-deep{
+    background:#050d18;
+}
 
-    padding:18px;
-
-    color:#bcd1e4;
-
+.section-title{
     text-align:center;
+
+    color:#ffd75a;
+
+    font-size:30px;
+
+    font-weight:800;
+}
+
+.section-subtitle{
+    text-align:center;
+
+    margin-top:4px;
+
+    margin-bottom:30px;
+
+    color:#90a8bd;
 
     font-size:14px;
 }
 
 
-/* ==============================
-   VIDEOS
-============================== */
+/* =====================================================
+   TOOLS
+===================================================== */
 
-.videos{
-    background:#041020;
+.tool-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
 }
+
+.tool-card{
+    background:
+    linear-gradient(
+        145deg,
+        #0b243f,
+        #081827
+    );
+
+    border:1px solid #234d70;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.25s;
+}
+
+.tool-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#ffd75a;
+}
+
+.tool-icon{
+    width:60px;
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 10px;
+
+    border-radius:16px;
+
+    background:#103d65;
+
+    font-size:28px;
+}
+
+.tool-card h3{
+    text-align:center;
+
+    color:#68d3ff;
+
+    font-size:21px;
+}
+
+.tool-type{
+    text-align:center;
+
+    color:#ffd75a;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    margin:5px 0 13px;
+}
+
+.tool-desc{
+    color:#b8cada;
+
+    text-align:center;
+
+    font-size:13px;
+
+    min-height:70px;
+}
+
+.plan-box{
+    margin-top:10px;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    background:#071524;
+
+    border:1px solid #1b3e5b;
+
+    font-size:12px;
+
+    color:#aebfd0;
+}
+
+.plan-box strong{
+    display:block;
+
+    margin-bottom:4px;
+}
+
+.free strong{
+    color:#6af09e;
+}
+
+.paid strong{
+    color:#ffd75a;
+}
+
+.premium strong{
+    color:#7ccaff;
+}
+
+.tool-open{
+    display:block;
+
+    margin-top:auto;
+
+    padding:11px;
+
+    border-radius:9px;
+
+    text-align:center;
+
+    background:#087fdc;
+
+    color:#ffffff;
+
+    font-size:12px;
+
+    font-weight:800;
+}
+
+.note{
+    margin:25px auto 0;
+
+    max-width:900px;
+
+    padding:14px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    border:1px solid #23557e;
+
+    background:#0b2945;
+
+    color:#b7cada;
+
+    font-size:12px;
+}
+
+
+/* =====================================================
+   VIDEOS
+===================================================== */
 
 .video-grid{
     display:grid;
@@ -403,15 +549,15 @@ nav a:hover{
     grid-template-columns:
     repeat(4,1fr);
 
-    gap:20px;
+    gap:18px;
 }
 
 .video-card{
-    background:#081f39;
+    background:#081d33;
 
-    border:1px solid #24577f;
+    border:1px solid #234c6f;
 
-    border-radius:16px;
+    border-radius:15px;
 
     overflow:hidden;
 
@@ -419,40 +565,38 @@ nav a:hover{
 }
 
 .video-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-5px);
 
     border-color:#ffd75a;
 
     box-shadow:
-    0 12px 30px rgba(0,0,0,.4);
+    0 12px 28px rgba(0,0,0,.3);
 }
 
-.video-link{
-    display:block;
-    text-decoration:none;
-    color:inherit;
-}
-
-.thumbnail{
+.video-thumb{
     position:relative;
+
     aspect-ratio:16/9;
-    background:#000;
+
     overflow:hidden;
+
+    background:#000;
 }
 
-.thumbnail img{
+.video-thumb img{
     width:100%;
     height:100%;
+
     object-fit:cover;
-    display:block;
-    transition:.3s;
+
+    transition:.25s;
 }
 
-.video-card:hover .thumbnail img{
+.video-card:hover .video-thumb img{
     transform:scale(1.04);
 }
 
-.play{
+.play-button{
     position:absolute;
 
     left:50%;
@@ -461,79 +605,88 @@ nav a:hover{
     transform:
     translate(-50%,-50%);
 
-    width:62px;
-    height:45px;
+    width:58px;
+    height:42px;
 
-    border-radius:12px;
-
-    background:#ff0000;
+    border-radius:11px;
 
     display:flex;
 
-    justify-content:center;
     align-items:center;
 
-    color:white;
+    justify-content:center;
 
-    font-size:24px;
+    background:#ff0000;
+
+    color:#ffffff;
+
+    font-size:20px;
 
     box-shadow:
-    0 5px 20px rgba(0,0,0,.5);
+    0 5px 15px rgba(0,0,0,.5);
 }
 
 .video-info{
-    padding:16px;
+    padding:14px;
 }
 
-.video-info small{
+.course-name{
     color:#ffd75a;
-    font-weight:bold;
+
+    font-size:10px;
+
+    font-weight:800;
 }
 
 .video-info h3{
-    color:#72d2ff;
-    margin:5px 0;
-    font-size:19px;
+    margin:4px 0;
+
+    color:#69d2ff;
+
+    font-size:17px;
 }
 
 .video-info p{
-    color:#b9cada;
-    font-size:14px;
+    color:#aebfd0;
+
+    font-size:12px;
+
+    min-height:40px;
 }
 
-.youtube-open{
+.watch{
     display:inline-block;
-    margin-top:10px;
+
+    margin-top:8px;
+
     color:#ff8c8c;
-    font-size:13px;
-    font-weight:bold;
+
+    font-size:11px;
+
+    font-weight:800;
 }
 
 
-/* ==============================
+/* =====================================================
    ABOUT
-============================== */
-
-.about{
-    background:#07182d;
-}
+===================================================== */
 
 .about-box{
-    max-width:950px;
+    max-width:850px;
 
     margin:auto;
 
-    background:#091f39;
-
-    border:1px solid #24537c;
-
-    border-radius:18px;
-
-    padding:35px;
+    padding:28px;
 
     text-align:center;
 
-    color:#c4d5e4;
+    border-radius:17px;
+
+    background:#0a2037;
+
+    border:1px solid #234d70;
+
+    color:#b7cada;
 }
 
 .about-box strong{
@@ -541,77 +694,82 @@ nav a:hover{
 }
 
 
-/* ==============================
+/* =====================================================
    CONTACT
-============================== */
+===================================================== */
 
-.contact{
-    text-align:center;
-    background:#030d1c;
-}
-
-.contacts{
+.contact-buttons{
     display:flex;
 
     justify-content:center;
 
-    gap:12px;
+    gap:10px;
 
     flex-wrap:wrap;
 }
 
-.contacts a{
-    background:#0c3158;
-
-    border:1px solid #28638f;
-
-    color:#ffffff;
-
-    text-decoration:none;
-
-    padding:12px 20px;
+.contact-buttons a{
+    padding:11px 16px;
 
     border-radius:9px;
 
-    font-weight:bold;
+    background:#0b3154;
+
+    border:1px solid #265a82;
+
+    color:#ffffff;
+
+    font-size:12px;
+
+    font-weight:700;
 }
 
-.contacts a:hover{
-    background:#0d72ce;
+.contact-buttons .wa{
+    background:#123d2b;
+
+    border-color:#1e9b5b;
+
+    color:#79e6a9;
 }
 
-.whatsapp{
-    background:#149b4a !important;
-    border-color:#22c55e !important;
-}
 
-
-/* ==============================
+/* =====================================================
    FOOTER
-============================== */
+===================================================== */
 
-footer{
-    background:#010610;
+.footer{
+    padding:30px 15px 100px;
 
     text-align:center;
 
-    padding:35px 15px;
+    background:#02070d;
 
-    color:#8ca4ba;
+    color:#8199ad;
+
+    font-size:12px;
 }
 
-footer strong{
+.footer strong{
     color:#ffd75a;
 }
 
 
-/* ==============================
+/* =====================================================
+   BOTTOM NAV MOBILE
+===================================================== */
+
+.bottom-nav{
+    display:none;
+}
+
+
+/* =====================================================
    TABLET
-============================== */
+===================================================== */
 
-@media(max-width:1100px){
+@media(max-width:1050px){
 
-    .app-grid{
+    .tool-grid{
         grid-template-columns:
         repeat(2,1fr);
     }
@@ -624,40 +782,160 @@ footer strong{
 }
 
 
-/* ==============================
+/* =====================================================
    MOBILE
-============================== */
+===================================================== */
 
 @media(max-width:700px){
 
-    .app-grid{
-        grid-template-columns:1fr;
+    body{
+        padding-bottom:78px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .header-logo{
+        width:42px;
+        height:42px;
+    }
+
+    .brand-title{
+        font-size:14px;
+    }
+
+    .brand-small{
+        font-size:10px;
+    }
+
+    .whatsapp-top{
+        font-size:10px;
+
+        padding:8px 10px;
+    }
+
+    .main-logo{
+        width:125px;
+        height:125px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero-tag{
+        font-size:16px;
+    }
+
+    .hero-telugu{
+        font-size:12px;
+    }
+
+    .section{
+        padding:42px 0;
+    }
+
+    .section-title{
+        font-size:25px;
+    }
+
+    .tool-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:11px;
+    }
+
+    .tool-card{
+        padding:14px;
+    }
+
+    .tool-icon{
+        width:52px;
+        height:52px;
+
+        font-size:24px;
+    }
+
+    .tool-card h3{
+        font-size:17px;
+    }
+
+    .tool-desc{
+        font-size:11px;
+
+        min-height:auto;
+    }
+
+    .plan-box{
+        font-size:10px;
+
+        padding:8px;
     }
 
     .video-grid{
         grid-template-columns:1fr;
     }
 
-    .hero h1{
-        font-size:34px;
+    .video-info p{
+        min-height:auto;
     }
 
-    .logo{
-        width:150px;
-        height:150px;
+    .bottom-nav{
+        display:flex;
+
+        position:fixed;
+
+        bottom:0;
+        left:0;
+        right:0;
+
+        z-index:5000;
+
+        height:68px;
+
+        padding:
+        7px 12px
+        calc(7px + env(safe-area-inset-bottom));
+
+        background:
+        rgba(5,13,24,.96);
+
+        border-top:
+        1px solid #203a52;
+
+        backdrop-filter:
+        blur(15px);
+
+        justify-content:
+        space-around;
+
+        align-items:center;
     }
 
-    .tag{
-        font-size:19px;
+    .bottom-nav a{
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:1px;
+
+        color:#91a7ba;
+
+        font-size:9px;
+
+        font-weight:700;
     }
 
-    nav a{
-        font-size:11px;
-        margin:4px 6px;
+    .bottom-nav span{
+        font-size:18px;
     }
 
-    .title{
-        font-size:28px;
+    .bottom-nav a:first-child{
+        color:#55caff;
     }
 
 }
@@ -670,42 +948,75 @@ footer strong{
 <body>
 
 
-<!-- ==============================
-     NAVIGATION
-============================== -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-<nav>
+<header class="top-header">
 
-<a href="#home">HOME</a>
+<div class="header-inner">
 
-<a href="#apps">APPS</a>
-
-<a href="#videos">VIDEOS</a>
-
-<a href="#about">ABOUT</a>
-
-<a href="#contact">CONTACT</a>
-
-</nav>
-
-
-
-<!-- ==============================
-     HOME
-============================== -->
-
-<section
-class="hero"
-id="home">
-
+<div class="brand-wrap">
 
 <img
-class="logo"
+class="header-logo"
+src="sld-ai-logo.png.png"
+alt="SLD AI EDUCATIONS">
+
+<div>
+
+<div class="brand-title">
+
+SLD AI EDUCATIONS
+
+<span class="pro-badge">
+PRO
+</span>
+
+</div>
+
+<div class="brand-small">
+
+తెలుగులో AI నేర్చుకోండి
+
+</div>
+
+</div>
+
+</div>
+
+
+<a
+class="whatsapp-top"
+href="https://wa.me/918464853033"
+target="_blank"
+rel="noopener">
+
+💬 SUPPORT
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<img
+class="main-logo"
 src="sld-ai-logo.png.png"
 alt="SLD AI EDUCATIONS Logo">
 
 
-<div class="brand">
+<div class="parent-brand">
 
 SLD AI CREATIONS వారి
 
@@ -719,16 +1030,23 @@ SLD AI EDUCATIONS
 </h1>
 
 
-<div class="tag">
+<div class="hero-tag">
 
 Learn AI in Telugu • Create Your Future
 
 </div>
 
 
-<div class="telugu">
+<div class="hero-telugu">
 
 తెలుగులో AI నేర్చుకోండి • మీ భవిష్యత్తును మీరు సృష్టించుకోండి
+
+</div>
+
+
+<div class="free-badge">
+
+🎉 Beginner నుంచి Step-by-Step Telugu Learning
 
 </div>
 
@@ -743,138 +1061,111 @@ alt="SLD AI EDUCATIONS Banner">
 
 
 <a
-class="btn"
-href="#apps">
+class="start-btn"
+href="#tools">
 
 🚀 START LEARNING
 
 </a>
 
+</div>
 
 </section>
 
 
 
-<!-- ==============================
-     APPS
-============================== -->
+<!-- =====================================================
+     AI TOOLS
+===================================================== -->
 
 <section
-class="apps"
-id="apps">
-
+class="section section-dark"
+id="tools">
 
 <div class="container">
 
-
-<h2 class="title">
+<h2 class="section-title">
 
 🚀 AI LEARNING TOOLS
 
 </h2>
 
-
-<p class="subtitle">
+<p class="section-subtitle">
 
 ChatGPT • Google Flow • CapCut • Canva
 
 </p>
 
 
-<div class="app-grid">
+<div class="tool-grid">
 
 
 <!-- CHATGPT -->
 
-<div class="app-card">
+<div class="tool-card">
 
 <div class="tool-icon">
+
 🤖
+
 </div>
 
 <h3>
+
 ChatGPT
+
 </h3>
 
-<div class="tool-category">
-AI ASSISTANT • WRITING • RESEARCH • LEARNING
-</div>
+<div class="tool-type">
 
-<p class="description">
-Questions, Prompt Writing,
-Content Creation, Research,
-Files, Images, Coding,
-Ideas మరియు Learning కోసం
-ఉపయోగపడే AI Assistant.
-</p>
-
-<div class="plan free-plan">
-
-<h4>
-🟢 FREE
-</h4>
-
-<p>
-Basic chat, writing,
-learning మరియు selected
-AI featuresను usage limitsతో
-ఉపయోగించవచ్చు.
-</p>
+AI ASSISTANT • WRITING • LEARNING
 
 </div>
 
+<p class="tool-desc">
 
-<div class="plan paid-plan">
+Prompt Writing, Content Creation,
+Learning, Research, Files,
+Images మరియు Coding కోసం.
 
-<h4>
-🟡 PAID
-</h4>
-
-<p>
-Higher usage,
-more tools,
-advanced capabilities
-మరియు additional access.
 </p>
 
-</div>
-
-
-<div class="plan premium-plan">
-
-<h4>
-💎 PREMIUM
-</h4>
-
-<p>
-Advanced AI models,
-higher limits,
-research, coding,
-files మరియు professional
-workflows కోసం.
-</p>
-
-</div>
-
-
-<div class="best-for">
+<div class="plan-box free">
 
 <strong>
-ఎవరికి ఉపయోగం?
+🟢 FREE
 </strong>
 
-<br>
-
-Students • Teachers •
-YouTubers • Creators •
-Business Owners • Developers
+Basic AI usage మరియు
+selected features.
 
 </div>
 
-<br>
+<div class="plan-box paid">
+
+<strong>
+🟡 PAID
+</strong>
+
+Higher limits మరియు
+additional AI tools.
+
+</div>
+
+<div class="plan-box premium">
+
+<strong>
+💎 PREMIUM
+</strong>
+
+Advanced models,
+research మరియు
+professional workflows.
+
+</div>
 
 <a
-class="tool-button"
+class="tool-open"
 href="https://chatgpt.com/"
 target="_blank"
 rel="noopener">
@@ -889,90 +1180,69 @@ OPEN CHATGPT ↗
 
 <!-- GOOGLE FLOW -->
 
-<div class="app-card">
+<div class="tool-card">
 
 <div class="tool-icon">
+
 🎬
+
 </div>
 
 <h3>
+
 Google Flow
+
 </h3>
 
-<div class="tool-category">
-AI VIDEO • FILMMAKING • CINEMATIC SCENES
+<div class="tool-type">
+
+AI VIDEO • FILMMAKING
+
 </div>
 
-<p class="description">
+<p class="tool-desc">
+
 AIతో cinematic scenes,
 images మరియు videos
-create చేయడానికి ఉపయోగపడే
-Google AI filmmaking tool.
+create చేయడానికి.
+
 </p>
 
-<div class="plan free-plan">
-
-<h4>
-🟢 FREE / LIMITED
-</h4>
-
-<p>
-Eligible usersకు limited
-credits లేదా generations
-అందుబాటులో ఉండవచ్చు.
-</p>
-
-</div>
-
-
-<div class="plan paid-plan">
-
-<h4>
-🟡 PAID
-</h4>
-
-<p>
-More AI credits,
-additional generations
-మరియు higher usage limits.
-</p>
-
-</div>
-
-
-<div class="plan premium-plan">
-
-<h4>
-💎 PREMIUM
-</h4>
-
-<p>
-Advanced Flow/Veo access,
-higher video generation limits
-మరియు professional creative usage.
-</p>
-
-</div>
-
-
-<div class="best-for">
+<div class="plan-box free">
 
 <strong>
-ఎవరికి ఉపయోగం?
+🟢 FREE / LIMITED
 </strong>
 
-<br>
-
-AI Filmmakers • YouTubers •
-Video Creators •
-Story Creators • Ads
+Eligible usersకు
+limited usage/credits.
 
 </div>
 
-<br>
+<div class="plan-box paid">
+
+<strong>
+🟡 PAID
+</strong>
+
+More credits మరియు
+more generations.
+
+</div>
+
+<div class="plan-box premium">
+
+<strong>
+💎 PREMIUM
+</strong>
+
+Advanced Flow/Veo
+usage మరియు higher limits.
+
+</div>
 
 <a
-class="tool-button"
+class="tool-open"
 href="https://labs.google/fx/tools/flow"
 target="_blank"
 rel="noopener">
@@ -987,95 +1257,69 @@ OPEN GOOGLE FLOW ↗
 
 <!-- CAPCUT -->
 
-<div class="app-card">
+<div class="tool-card">
 
 <div class="tool-icon">
+
 ✂️
+
 </div>
 
 <h3>
+
 CapCut
+
 </h3>
 
-<div class="tool-category">
-VIDEO EDITING • REELS • SHORTS • AI TOOLS
-</div>
+<div class="tool-type">
 
-<p class="description">
-YouTube Videos,
-Reels, Shorts,
-Text, Music, Effects,
-Transitions,
-Auto Captions మరియు
-AI Editing కోసం Video Editor.
-</p>
-
-<div class="plan free-plan">
-
-<h4>
-🟢 FREE
-</h4>
-
-<p>
-Cut, Trim,
-Split, Text,
-Music, Transitions
-మరియు basic editing tools.
-</p>
+VIDEO EDITING • SHORTS • REELS
 
 </div>
 
+<p class="tool-desc">
 
-<div class="plan paid-plan">
+Cut, Trim, Text, Effects,
+Captions, Shorts, Reels
+మరియు YouTube Editing కోసం.
 
-<h4>
-🟡 STANDARD / PAID
-</h4>
-
-<p>
-More templates,
-effects, assets,
-AI tools మరియు
-additional editing features.
 </p>
 
-</div>
-
-
-<div class="plan premium-plan">
-
-<h4>
-💎 CAPCUT PRO
-</h4>
-
-<p>
-Premium assets,
-advanced AI features,
-professional editing tools
-మరియు cloud features.
-</p>
-
-</div>
-
-
-<div class="best-for">
+<div class="plan-box free">
 
 <strong>
-ఎవరికి ఉపయోగం?
+🟢 FREE
 </strong>
 
-<br>
-
-YouTubers • Reels Creators •
-Editors • Beginners •
-Business Ads
+Basic editing tools మరియు
+selected templates.
 
 </div>
 
-<br>
+<div class="plan-box paid">
+
+<strong>
+🟡 STANDARD / PAID
+</strong>
+
+More effects,
+assets మరియు tools.
+
+</div>
+
+<div class="plan-box premium">
+
+<strong>
+💎 PRO
+</strong>
+
+Premium assets మరియు
+advanced AI editing.
+
+</div>
 
 <a
-class="tool-button"
+class="tool-open"
 href="https://www.capcut.com/"
 target="_blank"
 rel="noopener">
@@ -1090,101 +1334,71 @@ OPEN CAPCUT ↗
 
 <!-- CANVA -->
 
-<div class="app-card">
+<div class="tool-card">
 
 <div class="tool-icon">
+
 🎨
+
 </div>
 
 <h3>
+
 Canva
+
 </h3>
 
-<div class="tool-category">
-DESIGN • THUMBNAILS • POSTS • VIDEO • AI
+<div class="tool-type">
+
+DESIGN • THUMBNAILS • POSTERS
+
 </div>
 
-<p class="description">
+<p class="tool-desc">
+
 YouTube Thumbnails,
-Posters, Social Media Posts,
-Presentations, Logos,
-Videos మరియు Marketing Designs
-create చేయడానికి ఉపయోగపడే
-easy design platform.
+Posters, Social Posts,
+Presentations మరియు
+Designs కోసం.
+
 </p>
 
-
-<div class="plan free-plan">
-
-<h4>
-🟢 CANVA FREE
-</h4>
-
-<p>
-Free templates,
-basic photo/video editing,
-presentations,
-social media designs
-మరియు selected free assets.
-</p>
-
-</div>
-
-
-<div class="plan paid-plan">
-
-<h4>
-🟡 CANVA PRO
-</h4>
-
-<p>
-Premium templates,
-premium stock content,
-Brand Kit,
-Background Remover,
-Resize tools
-మరియు advanced design features.
-</p>
-
-</div>
-
-
-<div class="plan premium-plan">
-
-<h4>
-💎 AI / PREMIUM FEATURES
-</h4>
-
-<p>
-AI image generation,
-AI design tools,
-Magic tools,
-advanced editing,
-branding మరియు
-professional creative workflows.
-</p>
-
-</div>
-
-
-<div class="best-for">
+<div class="plan-box free">
 
 <strong>
-ఎవరికి ఉపయోగం?
+🟢 CANVA FREE
 </strong>
 
-<br>
-
-YouTubers • Students •
-Teachers • Businesses •
-Designers • Social Media Creators
+Free templates మరియు
+basic design tools.
 
 </div>
 
-<br>
+<div class="plan-box paid">
+
+<strong>
+🟡 CANVA PRO
+</strong>
+
+Premium templates,
+Brand Kit మరియు tools.
+
+</div>
+
+<div class="plan-box premium">
+
+<strong>
+💎 AI FEATURES
+</strong>
+
+Magic tools,
+AI design మరియు
+advanced editing.
+
+</div>
 
 <a
-class="tool-button"
+class="tool-open"
 href="https://www.canva.com/"
 target="_blank"
 rel="noopener">
@@ -1199,27 +1413,14 @@ OPEN CANVA ↗
 </div>
 
 
-<div class="plan-note">
+<div class="note">
 
-<strong>
-ℹ️ ముఖ్య గమనిక:
-</strong>
-
-<br>
-
-ChatGPT, Google Flow,
-CapCut మరియు Canva యొక్క
-plans, prices, limits,
-credits మరియు premium
-features కాలానుగుణంగా
-మారవచ్చు.
-
-Paid subscription తీసుకునే ముందు
-official websiteలో
+ℹ️ AI Tools యొక్క plans, limits, credits మరియు prices
+కాలానుగుణంగా మారవచ్చు.
+Paid plan తీసుకునే ముందు official websiteలో
 current details check చేయండి.
 
 </div>
-
 
 </div>
 
@@ -1227,28 +1428,26 @@ current details check చేయండి.
 
 
 
-<!-- ==============================
+<!-- =====================================================
      VIDEOS
-============================== -->
+===================================================== -->
 
 <section
-class="videos"
-id="videos">
-
+class="section section-deep"
+id="courses">
 
 <div class="container">
 
 
-<h2 class="title">
+<h2 class="section-title">
 
-🎬 OUR LEARNING VIDEOS
+🎬 FREE TELUGU VIDEO COURSES
 
 </h2>
 
+<p class="section-subtitle">
 
-<p class="subtitle">
-
-Videoపై Click చేస్తే నేరుగా YouTubeలో Open అవుతుంది
+Video cardపై Click చేస్తే నేరుగా YouTubeలో Original Video Open అవుతుంది
 
 </p>
 
@@ -1258,21 +1457,19 @@ Videoపై Click చేస్తే నేరుగా YouTubeలో Open అ�
 
 <!-- AI FILMMAKING DAY 1 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=ShDPHZIyrEs"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/ShDPHZIyrEs/hqdefault.jpg"
 alt="AI Filmmaking Day 1">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1280,49 +1477,43 @@ alt="AI Filmmaking Day 1">
 
 <div class="video-info">
 
-<small>
-🎬 AI FILMMAKING COURSE
-</small>
+<div class="course-name">
+🎬 AI FILMMAKING • DAY 1
+</div>
 
 <h3>
-AI Filmmaking — Day 1
+AI Filmmaking Basics
 </h3>
 
 <p>
-AI Filmmaking Basics మరియు
-Story → Character →
-Scene → Image → Video.
+Story → Character → Scene → Image → Video workflow.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- AI FILMMAKING DAY 2 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=z5ddU064OMY"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/z5ddU064OMY/hqdefault.jpg"
 alt="AI Filmmaking Day 2">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1330,49 +1521,43 @@ alt="AI Filmmaking Day 2">
 
 <div class="video-info">
 
-<small>
-🎬 AI FILMMAKING COURSE
-</small>
+<div class="course-name">
+🎬 AI FILMMAKING • DAY 2
+</div>
 
 <h3>
-AI Filmmaking — Day 2
+Prompt Writing
 </h3>
 
 <p>
-Image Prompt,
-Video Prompt మరియు
-Prompt Writing Step-by-Step.
+Image Prompt మరియు Video Prompt Step-by-Step.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- AI FILMMAKING DAY 3 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=6HXS109LHQk"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/6HXS109LHQk/hqdefault.jpg"
 alt="AI Filmmaking Day 3">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1380,48 +1565,43 @@ alt="AI Filmmaking Day 3">
 
 <div class="video-info">
 
-<small>
-🎬 AI FILMMAKING COURSE
-</small>
+<div class="course-name">
+🎬 AI FILMMAKING • DAY 3
+</div>
 
 <h3>
-AI Filmmaking — Day 3
+Character Consistency
 </h3>
 
 <p>
-Character Creation మరియు
-Character Consistency.
+Same Characterను multiple scenesలో consistentగా ఉంచడం.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- AI FILMMAKING DAY 4 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=Zd5cbdg4VqI&t=9s"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/Zd5cbdg4VqI/hqdefault.jpg"
 alt="AI Filmmaking Day 4">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1429,49 +1609,43 @@ alt="AI Filmmaking Day 4">
 
 <div class="video-info">
 
-<small>
-🎬 AI FILMMAKING COURSE
-</small>
+<div class="course-name">
+🎬 AI FILMMAKING • DAY 4
+</div>
 
 <h3>
-AI Filmmaking — Day 4
+Scenes & Shots
 </h3>
 
 <p>
-Story → Scenes →
-Shots → Camera Angles
-Step-by-Step.
+Scenes, Shots మరియు Camera Angles Practical Guide.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- CHATGPT DAY 1 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=ub4NDx4NqqE&t=51s"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/ub4NDx4NqqE/hqdefault.jpg"
 alt="ChatGPT Day 1">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1479,50 +1653,43 @@ alt="ChatGPT Day 1">
 
 <div class="video-info">
 
-<small>
-🤖 CHATGPT COURSE
-</small>
+<div class="course-name">
+🤖 CHATGPT • DAY 1
+</div>
 
 <h3>
-ChatGPT — Day 1
+ChatGPT Basics
 </h3>
 
 <p>
-ChatGPT Basicsను
-Beginner నుంచి
-Step-by-Stepగా
-తెలుగులో నేర్చుకోండి.
+Beginner నుంచి ChatGPT basic usage తెలుగులో.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- CHATGPT DAY 2 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=7V-5X1CLxFc&t=40s"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/7V-5X1CLxFc/hqdefault.jpg"
 alt="ChatGPT Day 2">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1530,48 +1697,43 @@ alt="ChatGPT Day 2">
 
 <div class="video-info">
 
-<small>
-🤖 CHATGPT COURSE
-</small>
+<div class="course-name">
+🤖 CHATGPT • DAY 2
+</div>
 
 <h3>
-ChatGPT — Day 2
+Perfect Prompt Writing
 </h3>
 
 <p>
-Perfect Prompt Writing మరియు
-సరైన instructions ఇవ్వడం.
+ChatGPTకి clear prompt ఎలా ఇవ్వాలో నేర్చుకోండి.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- CHATGPT DAY 3 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=EgrSTP0a_ho"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/EgrSTP0a_ho/hqdefault.jpg"
 alt="ChatGPT Day 3">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1579,51 +1741,43 @@ alt="ChatGPT Day 3">
 
 <div class="video-info">
 
-<small>
-🤖 CHATGPT COURSE
-</small>
+<div class="course-name">
+🤖 CHATGPT • DAY 3
+</div>
 
 <h3>
-ChatGPT — Day 3
+Daily Practical Uses
 </h3>
 
 <p>
-Daily Practical Uses,
-Messages,
-Translation,
-Summary,
-Ideas మరియు Planning.
+Messages, Translation, Summary, Ideas మరియు Planning.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- CHATGPT DAY 4 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=hGek27mX9Y0"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/hGek27mX9Y0/hqdefault.jpg"
 alt="ChatGPT Day 4">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1631,49 +1785,43 @@ alt="ChatGPT Day 4">
 
 <div class="video-info">
 
-<small>
-🤖 CHATGPT COURSE
-</small>
+<div class="course-name">
+🤖 CHATGPT • DAY 4
+</div>
 
 <h3>
-ChatGPT — Day 4
+Reusable Prompt Templates
 </h3>
 
 <p>
-Reusable Prompts,
-Placeholders మరియు
-Master Prompt Templates.
+Placeholders మరియు Master Prompt Templates.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- SPOKEN ENGLISH DAY 1 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=FzxzsqIyhuQ&t=316s"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/FzxzsqIyhuQ/hqdefault.jpg"
 alt="Spoken English Day 1">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1681,49 +1829,43 @@ alt="Spoken English Day 1">
 
 <div class="video-info">
 
-<small>
-🗣️ SPOKEN ENGLISH COURSE
-</small>
+<div class="course-name">
+🗣️ SPOKEN ENGLISH • DAY 1
+</div>
 
 <h3>
-Spoken English — Day 1
+Basic Greetings
 </h3>
 
 <p>
-Basic Greetings మరియు
-Spoken Englishను
-తెలుగు ద్వారా నేర్చుకోండి.
+తెలుగు ద్వారా Spoken English Basics.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- SPOKEN ENGLISH DAY 2 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=-k0Cfd5PB9E&t=2s"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/-k0Cfd5PB9E/hqdefault.jpg"
 alt="Spoken English Day 2">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1731,49 +1873,43 @@ alt="Spoken English Day 2">
 
 <div class="video-info">
 
-<small>
-🗣️ SPOKEN ENGLISH COURSE
-</small>
+<div class="course-name">
+🗣️ SPOKEN ENGLISH • DAY 2
+</div>
 
 <h3>
-Spoken English — Day 2
+Spoken English Day 2
 </h3>
 
 <p>
-Spoken English Day 2ను
-తెలుగులో Step-by-Stepగా
-నేర్చుకోండి.
+Beginner English Practice తెలుగులో Step-by-Step.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- GOOGLE FLOW DAY 1 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=AnwER2JvCHA"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/AnwER2JvCHA/hqdefault.jpg"
-alt="Google Flow Telugu Course Day 1">
+alt="Google Flow Day 1">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1781,52 +1917,43 @@ alt="Google Flow Telugu Course Day 1">
 
 <div class="video-info">
 
-<small>
-🎬 GOOGLE FLOW TELUGU COURSE
-</small>
+<div class="course-name">
+🎬 GOOGLE FLOW • DAY 1
+</div>
 
 <h3>
-Google Flow — Day 1
+Google Flow Basics
 </h3>
 
 <p>
-Google Flow Basics,
-Character,
-Reference Image,
-Image-to-Video,
-Camera Movement మరియు
-Character Consistency.
+Character, Reference Image, Image-to-Video మరియు Camera.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- GOOGLE FLOW DAY 2 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=K1O1CsQmiU8"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/K1O1CsQmiU8/hqdefault.jpg"
-alt="Google Flow Telugu Course Day 2">
+alt="Google Flow Day 2">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1834,52 +1961,43 @@ alt="Google Flow Telugu Course Day 2">
 
 <div class="video-info">
 
-<small>
-🎬 GOOGLE FLOW TELUGU COURSE
-</small>
+<div class="course-name">
+🎬 GOOGLE FLOW • DAY 2
+</div>
 
 <h3>
-Google Flow — Day 2
+Advanced Practical
 </h3>
 
 <p>
-Google Flow Advanced Practical,
-Start Frame → End Frame,
-References,
-Character Consistency,
-Camera Control మరియు
-Scene Workflow.
+Start Frame, End Frame, References మరియు Scene Workflow.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
 </div>
 
 </a>
-
-</div>
 
 
 
 <!-- CAPCUT DAY 1 -->
 
-<div class="video-card">
-
 <a
-class="video-link"
+class="video-card"
 href="https://www.youtube.com/watch?v=4PJzRabgo1c"
 target="_blank"
 rel="noopener">
 
-<div class="thumbnail">
+<div class="video-thumb">
 
 <img
 src="https://img.youtube.com/vi/4PJzRabgo1c/hqdefault.jpg"
-alt="CapCut Telugu Course Day 1">
+alt="CapCut Day 1">
 
-<div class="play">
+<div class="play-button">
 ▶
 </div>
 
@@ -1887,27 +2005,19 @@ alt="CapCut Telugu Course Day 1">
 
 <div class="video-info">
 
-<small>
-✂️ CAPCUT TELUGU COURSE
-</small>
+<div class="course-name">
+✂️ CAPCUT • DAY 1
+</div>
 
 <h3>
-CapCut — Day 1
+CapCut Basics
 </h3>
 
 <p>
-New Project,
-Import,
-Timeline,
-Playhead,
-Trim,
-Split,
-Delete,
-Text,
-Ratio మరియు Video Export.
+Import, Timeline, Trim, Split, Text, Ratio మరియు Export.
 </p>
 
-<span class="youtube-open">
+<span class="watch">
 ▶ WATCH ON YOUTUBE
 </span>
 
@@ -1915,11 +2025,8 @@ Ratio మరియు Video Export.
 
 </a>
 
-</div>
-
 
 </div>
-
 
 </div>
 
@@ -1927,26 +2034,23 @@ Ratio మరియు Video Export.
 
 
 
-<!-- ==============================
+<!-- =====================================================
      ABOUT
-============================== -->
+===================================================== -->
 
 <section
-class="about"
+class="section section-dark"
 id="about">
-
 
 <div class="container">
 
-
-<h2 class="title">
+<h2 class="section-title">
 
 ABOUT SLD AI EDUCATIONS
 
 </h2>
 
-
-<p class="subtitle">
+<p class="section-subtitle">
 
 SLD AI CREATIONS వారి Telugu Learning Platform
 
@@ -1955,42 +2059,29 @@ SLD AI CREATIONS వారి Telugu Learning Platform
 
 <div class="about-box">
 
-
 <strong>
 
 SLD AI CREATIONS వారి
-
 <br>
-
 SLD AI EDUCATIONS
 
 </strong>
 
-
 <br><br>
 
-
-తెలుగులో
-
-ChatGPT,
-Google Flow,
-CapCut,
-Canva,
-AI Filmmaking,
-Spoken English,
+ChatGPT, Google Flow, CapCut, Canva,
+AI Filmmaking, Spoken English,
 Prompt Engineering,
-AI Image Creation,
-AI Video Creation
+AI Image Creation మరియు
+AI Video Creationను
 
-మరియు AI Technologyని
+<strong>
+Beginner నుంచి Step-by-Stepగా తెలుగులో
+</strong>
 
-Beginner నుంచి
-Step-by-Stepగా
 నేర్పించే Learning Platform.
 
-
 <br><br>
-
 
 <strong>
 
@@ -1998,9 +2089,7 @@ Learn AI in Telugu • Create Your Future
 
 </strong>
 
-
 </div>
-
 
 </div>
 
@@ -2008,34 +2097,30 @@ Learn AI in Telugu • Create Your Future
 
 
 
-<!-- ==============================
+<!-- =====================================================
      CONTACT
-============================== -->
+===================================================== -->
 
 <section
-class="contact"
+class="section section-deep"
 id="contact">
-
 
 <div class="container">
 
-
-<h2 class="title">
+<h2 class="section-title">
 
 CONNECT WITH US
 
 </h2>
 
-
-<p class="subtitle">
+<p class="section-subtitle">
 
 Follow • Learn • Share • Grow
 
 </p>
 
 
-<div class="contacts">
-
+<div class="contact-buttons">
 
 <a
 href="https://www.youtube.com/@SLDAIEDUCATIONS"
@@ -2058,12 +2143,12 @@ rel="noopener">
 
 
 <a
-class="whatsapp"
+class="wa"
 href="https://wa.me/918464853033"
 target="_blank"
 rel="noopener">
 
-💬 WhatsApp: 8464853033
+💬 WhatsApp 8464853033
 
 </a>
 
@@ -2077,7 +2162,7 @@ href="mailto:sldaiedu@gmail.com">
 
 
 <a
-href="https://sldaiedu.co.in"
+href="https://sldaiedu.co.in/"
 target="_blank"
 rel="noopener">
 
@@ -2085,9 +2170,7 @@ rel="noopener">
 
 </a>
 
-
 </div>
-
 
 </div>
 
@@ -2095,12 +2178,11 @@ rel="noopener">
 
 
 
-<!-- ==============================
+<!-- =====================================================
      FOOTER
-============================== -->
+===================================================== -->
 
-<footer>
-
+<footer class="footer">
 
 <strong>
 
@@ -2108,41 +2190,84 @@ SLD AI CREATIONS వారి
 
 </strong>
 
-
 <br>
-
 
 SLD AI EDUCATIONS
 
-
 <br>
-
 
 Learn AI in Telugu • Create Your Future
 
-
 <br><br>
-
 
 WhatsApp: 8464853033
 
+<br>
+
+Email: sldaiedu@gmail.com
 
 <br><br>
 
-
-తెలుగులో నేర్చుకోండి •
-Practice చేయండి •
-Create చేయండి •
-Grow అవ్వండి
-
-
-<br><br>
-
-
-© 2026 SLD AI EDUCATIONS • All Rights Reserved
-
+© 2026 SLD AI EDUCATIONS
+• All Rights Reserved
 
 </footer>
+
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAVIGATION
+===================================================== -->
+
+<nav class="bottom-nav">
+
+<a href="#home">
+
+<span>
+🏠
+</span>
+
+HOME
+
+</a>
+
+
+<a href="#tools">
+
+<span>
+🤖
+</span>
+
+AI TOOLS
+
+</a>
+
+
+<a href="#courses">
+
+<span>
+▶️
+</span>
+
+COURSES
+
+</a>
+
+
+<a
+href="https://wa.me/918464853033"
+target="_blank"
+rel="noopener">
+
+<span>
+💬
+</span>
+
+WHATSAPP
+
+</a>
+
+</nav>
 
 
 </body>
