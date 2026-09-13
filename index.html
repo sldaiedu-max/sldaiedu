@@ -68,6 +68,7 @@ img{display:block;max-width:100%}
 }
 .start-btn{background:linear-gradient(90deg,#0577e6,#00b7ff)}
 .install-btn{background:linear-gradient(90deg,#0e8f4e,#20c974)}
+#iosInstallBtn{background:linear-gradient(90deg,#334155,#64748b)}
 .install-note{margin-top:10px;color:#9ec9e8;font-size:12px;min-height:18px}
 
 /* COMMON */
@@ -154,6 +155,25 @@ img{display:block;max-width:100%}
   .bottom-nav span{font-size:18px}
   .bottom-nav a:first-child{color:#55caff}
 }
+
+/* iPhone / iPad install guide */
+.ios-modal{
+  display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.72);
+  align-items:center;justify-content:center;padding:20px
+}
+.ios-modal.show{display:flex}
+.ios-card{
+  width:min(92vw,430px);background:#081d33;border:1px solid #2d638e;border-radius:20px;
+  padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:left
+}
+.ios-card h3{color:#ffd75a;font-size:22px;margin-bottom:10px;text-align:center}
+.ios-card p{color:#c8d8e6;font-size:14px;line-height:1.7;margin:8px 0}
+.ios-steps{margin:14px 0;padding-left:22px;color:#e8f4ff;font-size:14px;line-height:1.9}
+.ios-close{
+  width:100%;margin-top:10px;padding:12px;border:0;border-radius:10px;cursor:pointer;
+  background:linear-gradient(90deg,#0577e6,#00b7ff);color:white;font-weight:800
+}
+
 </style>
 </head>
 
@@ -187,7 +207,8 @@ img{display:block;max-width:100%}
 
     <div class="hero-actions">
       <a class="start-btn" href="#tools">🚀 START LEARNING</a>
-      <button class="install-btn" id="installAppBtn">📲 INSTALL APP</button>
+      <button class="install-btn" id="installAppBtn">🤖 ANDROID INSTALL</button>
+      <button class="install-btn" id="iosInstallBtn">🍎 iPHONE INSTALL</button>
     </div>
     <div class="install-note" id="installNote"></div>
   </div>
@@ -337,6 +358,22 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
+
+<div class="ios-modal" id="iosInstallModal" role="dialog" aria-modal="true" aria-labelledby="iosInstallTitle">
+  <div class="ios-card">
+    <h3 id="iosInstallTitle">🍎 iPhone / iPad App Install</h3>
+    <p>SLD AI EDUCATIONSను iPhoneలో Appలా install చేయడానికి Safariలో ఈ steps follow చేయండి:</p>
+    <ol class="ios-steps">
+      <li>ఈ websiteను <strong>Safari</strong>లో open చేయండి.</li>
+      <li>కింద ఉన్న <strong>Share ⬆️</strong> button నొక్కండి.</li>
+      <li><strong>Add to Home Screen</strong> ఎంచుకోండి.</li>
+      <li>పై భాగంలో <strong>Add</strong> నొక్కండి.</li>
+    </ol>
+    <p>అంతే — SLD AI EDUCATIONS icon మీ iPhone Home Screenలో కనిపిస్తుంది.</p>
+    <button class="ios-close" id="iosCloseBtn">OK — GOT IT</button>
+  </div>
+</div>
+
 <footer class="footer">
   <strong>SLD AI CREATIONS వారి</strong><br>
   SLD AI EDUCATIONS<br>
@@ -354,77 +391,117 @@ img{display:block;max-width:100%}
 </nav>
 
 <script>
-/* PWA service worker */
+/* SLD AI EDUCATIONS — Android + iPhone/iPad PWA install support */
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").catch(console.error);
   });
 }
 
-/* Android install prompt */
 let deferredPrompt = null;
 const installBtn = document.getElementById("installAppBtn");
+const iosInstallBtn = document.getElementById("iosInstallBtn");
 const installNote = document.getElementById("installNote");
+const iosModal = document.getElementById("iosInstallModal");
+const iosCloseBtn = document.getElementById("iosCloseBtn");
+
+function isIOS() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+         (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+}
 
 function isStandalone() {
   return window.matchMedia("(display-mode: standalone)").matches ||
          window.navigator.standalone === true;
 }
 
-if (isStandalone()) {
-  installNote.textContent = "✅ SLD AI EDUCATIONS App ఇప్పటికే install అయింది.";
+function openIOSGuide() {
+  if (iosModal) iosModal.classList.add("show");
 }
 
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  deferredPrompt = event;
-  if (!isStandalone()) {
-    installBtn.hidden = false;
-    installNote.textContent = "Androidలో Appగా install చేయడానికి పై INSTALL APP button నొక్కండి.";
-  }
-});
+function closeIOSGuide() {
+  if (iosModal) iosModal.classList.remove("show");
+}
 
-installBtn.addEventListener("click", async () => {
-  if (!deferredPrompt) {
-    const isIOS = /iphone|ipad|ipod/i.test(window.navigator.userAgent);
-    if (isIOS) {
-      installNote.textContent = "iPhoneలో Safari → Share → Add to Home Screen నొక్కి App install చేయండి.";
-    } else {
-      installNote.textContent = "Chrome menu → Add to Home screen / Install app ద్వారా కూడా install చేయవచ్చు.";
+document.addEventListener("DOMContentLoaded", () => {
+  if (isStandalone()) {
+    if (installBtn) installBtn.style.display = "none";
+    if (iosInstallBtn) iosInstallBtn.style.display = "none";
+    if (installNote) {
+      installNote.style.display = "block";
+      installNote.textContent = "✅ SLD AI EDUCATIONS App ఇప్పటికే install అయింది.";
     }
     return;
   }
 
-  deferredPrompt.prompt();
-  const result = await deferredPrompt.userChoice;
+  /* iPhone/iPad install instructions are handled by a separate button. */
+  if (isIOS() && installNote) {
+    installNote.textContent = "iPhone/iPad: Safari → Share → Add to Home Screen.";
+  }
+});
 
-  if (result.outcome === "accepted") {
-    installNote.textContent = "✅ Install ప్రారంభమైంది.";
-  } else {
-    installNote.textContent = "Install cancel చేశారు. కావాలంటే మళ్లీ ప్రయత్నించండి.";
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+
+  if (!isStandalone() && installBtn) {
+    installBtn.hidden = false;
+    installBtn.style.display = "inline-block";
+    installBtn.textContent = "🤖 ANDROID INSTALL";
   }
 
-  deferredPrompt = null;
+  if (installNote) {
+    installNote.textContent = "Androidలో Appగా install చేయడానికి INSTALL APP button నొక్కండి.";
+  }
 });
+
+if (installBtn) {
+  installBtn.addEventListener("click", async () => {
+    if (isStandalone()) return;
+
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const result = await deferredPrompt.userChoice;
+
+      if (installNote) {
+        installNote.textContent =
+          result.outcome === "accepted"
+            ? "✅ Install ప్రారంభమైంది."
+            : "Install cancel చేశారు. కావాలంటే మళ్లీ ప్రయత్నించండి.";
+      }
+
+      deferredPrompt = null;
+      return;
+    }
+
+    if (installNote) {
+      installNote.textContent =
+        "Chrome menu → Install app / Add to Home screen ద్వారా install చేయండి.";
+    }
+  });
+}
+
+if (iosCloseBtn) iosCloseBtn.addEventListener("click", closeIOSGuide);
+if (iosModal) {
+  iosModal.addEventListener("click", (e) => {
+    if (e.target === iosModal) closeIOSGuide();
+  });
+}
+
+
+if (iosInstallBtn) {
+  iosInstallBtn.addEventListener("click", () => {
+    if (isStandalone()) return;
+    openIOSGuide();
+  });
+}
 
 window.addEventListener("appinstalled", () => {
-  installNote.textContent = "✅ SLD AI EDUCATIONS App విజయవంతంగా install అయింది.";
-});
-</script>
-
-
-<script id="standalone-install-cleanup">
-document.addEventListener("DOMContentLoaded", function () {
-  const installButton = document.getElementById("installAppBtn");
-  const installNote = document.getElementById("installNote");
-
-  const isInstalled =
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true;
-
-  if (isInstalled) {
-    if (installButton) installButton.style.display = "none";
-    if (installNote) installNote.style.display = "none";
+  if (installBtn) installBtn.style.display = "none";
+  if (iosInstallBtn) iosInstallBtn.style.display = "none";
+  if (installNote) {
+    installNote.style.display = "block";
+    installNote.textContent = "✅ SLD AI EDUCATIONS App విజయవంతంగా install అయింది.";
   }
 });
 </script>
